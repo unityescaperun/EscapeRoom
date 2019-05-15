@@ -28,7 +28,8 @@ public class MapManager : MonoBehaviour
         for (int x = -1; x < columns + 1; x++) {
             for (int y = -1; y < rows + 1; y++) {
                 GameObject toinstantiate = wall;
-                if (x == -1 || x == columns || y == -1 || y == rows)
+                if (x == -1 || x == columns || y == -1 || y == rows 
+                    || (y == 3 && x != 17 && x != 18 && x != 19))
                     toinstantiate = outerWall;
 
                 GameObject instance = Instantiate(toinstantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
