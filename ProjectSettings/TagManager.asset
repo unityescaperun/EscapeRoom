@@ -7,6 +7,9 @@ TagManager:
   - Item
   - OuterWall
   - Wall
+  - Item1
+  - Item2
+  - Key
   layers:
   - Default
   - TransparentFX
