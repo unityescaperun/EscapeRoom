@@ -15,13 +15,10 @@ public class CameraController : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-
-
     void FixedUpdate() {
         float posX = Mathf.SmoothDamp(transform.position.x, player.transform.position.x, ref velocity.x, smoothTimeX);
         float posY = 3f;
 
         transform.position = new Vector3(posX, posY, transform.position.z);
-
     }
 }

@@ -179,6 +179,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: PortalUp
+      value: 
+      objectReference: {fileID: 1829200903810053445, guid: afb45535ceb68354cb000770db3713d8,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: PortalDown
+      value: 
+      objectReference: {fileID: 5674903832653008210, guid: b38ad5223f556a54baab0c4a92e801d5,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c1dde809e361c4bb166750be9c8894, type: 3}
 --- !u!1 &519420028
@@ -301,7 +313,7 @@ PrefabInstance:
     - target: {fileID: 7273694606971605769, guid: b3198c769faf36843a18aac2018a2f82,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7273694606971605769, guid: b3198c769faf36843a18aac2018a2f82,
         type: 3}
@@ -361,7 +373,7 @@ PrefabInstance:
     - target: {fileID: 7273694606971605768, guid: b3198c769faf36843a18aac2018a2f82,
         type: 3}
       propertyPath: m_CollisionDetection
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7273694606971605768, guid: b3198c769faf36843a18aac2018a2f82,
         type: 3}

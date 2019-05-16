@@ -10,6 +10,8 @@ public class MapManager : MonoBehaviour
     public GameObject exit;
     public GameObject outerWall;
     public GameObject wall;
+    public GameObject PortalUp;
+    public GameObject PortalDown;
 
     private Transform boardHolder;
     private List<Vector3> gridPosition = new List<Vector3>();
@@ -28,8 +30,7 @@ public class MapManager : MonoBehaviour
         for (int x = -1; x < columns + 1; x++) {
             for (int y = -1; y < rows + 1; y++) {
                 GameObject toinstantiate = wall;
-                if (x == -1 || x == columns || y == -1 || y == rows 
-                    || (y == 3 && x != 17 && x != 18 && x != 19))
+                if (x == -1 || x == columns || y == -1 || y == rows || y == 3)
                     toinstantiate = outerWall;
 
                 GameObject instance = Instantiate(toinstantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
@@ -42,7 +43,9 @@ public class MapManager : MonoBehaviour
     public void SetupScene() {
         Boardsetup();
         InitialiseList();
-        
-        Instantiate(exit, new Vector3(columns - 1, rows -7, 0f), Quaternion.identity);
+
+        Instantiate(exit, new Vector3(columns - 1, rows - 7, 0f), Quaternion.identity);
+        Instantiate(PortalUp, new Vector3(0, rows - 7, 0f), Quaternion.identity);
+        Instantiate(PortalDown, new Vector3(19, rows - 3, 0f), Quaternion.identity);
     }
 }
