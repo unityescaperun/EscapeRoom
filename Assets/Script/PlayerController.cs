@@ -5,17 +5,22 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
     private Animator animator;
     GameObject player;
+    GameObject Key;
+
+    List<Inventroy> itemList = new List<Inventroy>();
 
     private Rigidbody2D rb2D;
-    bool coll;
 
     Vector2 MoveVelocity;
     public float Speed = 5f;
+    bool OpenDoor;
+
     void Start() {
-        coll = false;
         rb2D = GetComponent<Rigidbody2D>();
+        OpenDoor = false;
 
         player = GameObject.FindGameObjectWithTag("Player");
+        Key = GameObject.FindGameObjectWithTag("Key");
     }
 
     void Update() {
@@ -35,6 +40,16 @@ public class PlayerController : MonoBehaviour {
 
         if (other.tag == "PortalDown") {
             player.transform.position = new Vector3(1, 0, 0);
+        }
+
+        if(other.tag == "Key") {
+            other.gameObject.SetActive(false);
+            OpenDoor = true;
+        }
+
+        if(other.tag == "Finish") {
+            if (OpenDoor == true)
+                GameManager.EndGame();
         }
     }
 }

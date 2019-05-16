@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Script\CameraController.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
+    <Compile Include="Assets\Script\Inventroy.cs" />
     <Compile Include="Assets\Script\MapManager.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
