@@ -12,6 +12,7 @@ TagManager:
   - Key
   - PortalUp
   - PortalDown
+  - Item Database
   layers:
   - Default
   - TransparentFX
