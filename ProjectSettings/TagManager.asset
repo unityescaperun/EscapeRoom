@@ -13,6 +13,7 @@ TagManager:
   - PortalUp
   - PortalDown
   - Item Database
+  - inventory
   layers:
   - Default
   - TransparentFX

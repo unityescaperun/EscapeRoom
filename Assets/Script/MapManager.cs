@@ -12,6 +12,8 @@ public class MapManager : MonoBehaviour
     public GameObject wall;
     public GameObject PortalUp;
     public GameObject PortalDown;
+    public GameObject Item1;
+    public GameObject Item2;
     public GameObject Key;
 
     private Transform boardHolder;
@@ -48,6 +50,7 @@ public class MapManager : MonoBehaviour
         Instantiate(exit, new Vector3(columns - 1, rows - 7, 0f), Quaternion.identity);
         Instantiate(PortalUp, new Vector3(0, rows - 7, 0f), Quaternion.identity);
         Instantiate(PortalDown, new Vector3(19, rows - 3, 0f), Quaternion.identity);
-        Instantiate(Key, new Vector3(0, rows - 3, 0f), Quaternion.identity);
+        Instantiate(Item1, new Vector3(7, rows - 3, 0f), Quaternion.identity);
+        Instantiate(Item2, new Vector3(3, rows - 7, 0f), Quaternion.identity);
     }
 }

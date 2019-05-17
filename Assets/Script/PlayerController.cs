@@ -7,17 +7,15 @@ public class PlayerController : MonoBehaviour {
     GameObject player;
     GameObject Key;
 
-    List<Inventroy> itemList = new List<Inventroy>();
-
+    private Inventory inven;
     private Rigidbody2D rb2D;
 
     Vector2 MoveVelocity;
     public float Speed = 5f;
-    bool OpenDoor;
 
     void Start() {
         rb2D = GetComponent<Rigidbody2D>();
-        OpenDoor = false;
+        inven = GetComponent<Inventory>();
 
         player = GameObject.FindGameObjectWithTag("Player");
         Key = GameObject.FindGameObjectWithTag("Key");
@@ -35,20 +33,30 @@ public class PlayerController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "PortalUp") {
+            Debug.Log("UP");
             player.transform.position = new Vector3(18, 4, 0);
         }
 
         if (other.tag == "PortalDown") {
+            Debug.Log("DOWN");
             player.transform.position = new Vector3(1, 0, 0);
         }
 
-        if(other.tag == "Key") {
+        if (other.tag == "Item1") {
+            Debug.Log("Get Item1");
             other.gameObject.SetActive(false);
-            OpenDoor = true;
+            Inventory.instance.AddItem(1001);
         }
 
-        if(other.tag == "Finish") {
-            if (OpenDoor == true)
+        if (other.tag == "Item2") {
+            Debug.Log("Get Item2");
+            other.gameObject.SetActive(false);
+            Inventory.instance.AddItem(1002);
+        }
+
+        if (other.tag == "Finish") {
+            Debug.Log("Finish");
+            if (Inventory.instance.inventoryContains(2003))
                 GameManager.EndGame();
         }
     }

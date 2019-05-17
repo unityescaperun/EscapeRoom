@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventroy : MonoBehaviour {
+public class Inventory : MonoBehaviour {
+    public static Inventory instance;
+
     public List<Item> inventory = new List<Item>();
     private itemDatabase db;
 
@@ -20,6 +22,11 @@ public class Inventroy : MonoBehaviour {
     private int prevIndex;
 
     private bool CombItem;
+    GameObject player;
+
+    private void Awake() {
+        instance = this;
+    }
 
     void Start() {
         for(int i = 0; i < slotX * slotY; i++) {
@@ -27,10 +34,8 @@ public class Inventroy : MonoBehaviour {
             inventory.Add(new Item());
         }
         db = GameObject.FindGameObjectWithTag("Item Database").GetComponent<itemDatabase>();
-
-        AddItem(1001);
-        AddItem(1002);
-        AddItem(2003);       
+        player = GameObject.FindGameObjectWithTag("Player");
+        
     }
 
     void Update() {
@@ -134,7 +139,7 @@ public class Inventroy : MonoBehaviour {
         return false;
     }
     
-    void AddItem(int id) {
+    public void AddItem(int id) {
         for (int i = 0; i < inventory.Count; i++) {
             if(inventory[i].itemName == null) {
                 for(int j = 0; j < db.items.Count; j++) {
@@ -145,11 +150,13 @@ public class Inventroy : MonoBehaviour {
                 }
             }
         }
+        Debug.Log("Add item");
     }
 
-    bool inventoryContains(int id) {
+    public bool inventoryContains(int id) {
         for(int i = 0; i < inventory.Count; i++) {
-            return (inventory[i].itemID == id);
+            if (inventory[i].itemID == id)
+                return true;
         }
         return false;
     }

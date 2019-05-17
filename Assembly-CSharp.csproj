@@ -62,7 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Script\CameraController.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
-    <Compile Include="Assets\Script\Inventroy.cs" />
+    <Compile Include="Assets\Script\Inventory.cs" />
     <Compile Include="Assets\Script\Item.cs" />
     <Compile Include="Assets\Script\itemDatabase.cs" />
     <Compile Include="Assets\Script\MapManager.cs" />

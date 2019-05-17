@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 305798026}
   m_Layer: 0
   m_Name: Inventory
-  m_TagString: Untagged
+  m_TagString: inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -288,6 +288,18 @@ PrefabInstance:
       propertyPath: Key
       value: 
       objectReference: {fileID: 2679411553327677206, guid: 74c051893b274c0469563422cc7bb9c2,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Item1
+      value: 
+      objectReference: {fileID: 2458399276039047358, guid: 61a3b922329f26d46ac6634ff7820276,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Item2
+      value: 
+      objectReference: {fileID: 2339950590289313151, guid: 37b8c4b34e15a03448309f7e6746f9d0,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c1dde809e361c4bb166750be9c8894, type: 3}
