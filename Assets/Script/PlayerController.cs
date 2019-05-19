@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviour {
 
     void FixedUpdate() {
         rb2D.MovePosition(rb2D.position + MoveVelocity * Time.fixedDeltaTime);
-
     }
 
     void OnTriggerEnter2D(Collider2D other) {
