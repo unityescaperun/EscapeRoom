@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// 인벤토리 시스템 구현.
 public class Inventory : MonoBehaviour {
     public static Inventory instance;
 
@@ -126,12 +127,14 @@ public class Inventory : MonoBehaviour {
         }
     }
 
+    // 아이템 툴팁.
     string CreateTooltip(Item item) {
         tooltip = "Item name : " + item.itemName + "\nitem Desc : " + item.itemDes;
         return tooltip;
            
     }
 
+    // 아이템 조합식 구현. 조합되는 모든 아이템들을 여기에서 구현해야 한다.
     bool CombineItem(Item item1, Item item2) {
         if(item1.itemID == 1001 && item2.itemID == 1002 || item1.itemID == 1002 && item2.itemID == 1001) {
             return true;
@@ -139,6 +142,7 @@ public class Inventory : MonoBehaviour {
         return false;
     }
     
+    // 아이템 획득
     public void AddItem(int id) {
         for (int i = 0; i < inventory.Count; i++) {
             if(inventory[i].itemName == null) {
@@ -153,6 +157,8 @@ public class Inventory : MonoBehaviour {
         Debug.Log("Add item");
     }
 
+    // 인벤토리에 어떤 아이템이 있나 구하는 함수.
+    // 보통 Key의 존재유무를 판단한다.
     public bool inventoryContains(int id) {
         for(int i = 0; i < inventory.Count; i++) {
             if (inventory[i].itemID == id)
@@ -161,6 +167,7 @@ public class Inventory : MonoBehaviour {
         return false;
     }
 
+    // 아이템 제거 함수. 아직 사용하지 않는다
     void RemoveItem(int id) {
         for(int i = 0; i < inventory.Count; i++) {
             if(inventory[i].itemID == id) {

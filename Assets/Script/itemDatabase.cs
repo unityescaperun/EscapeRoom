@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// 아이템 데이터베이스. 여기에 필요한 아이템들을 작성하여 적용한다.
 public class itemDatabase : MonoBehaviour {
     public List<Item> items = new List<Item>();
 

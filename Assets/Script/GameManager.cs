@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     public MapManager mapScript;
 
-    static int stageLevel = 1;
+    public static int stageLevel = 1;
     static bool ifEnded = false;
 
     void Awake() {
@@ -26,14 +26,14 @@ public class GameManager : MonoBehaviour {
     }
 
     public static void EndGame() {
-        if (stageLevel == 2) {// 마지막 스테이지 설정
+        stageLevel++;
+        // 마지막 스테이지 설정
+        if (stageLevel == 4) {
             Application.Quit();
-            //ifEnded = true;
         }
         else
             SceneManager.LoadScene(stageLevel, LoadSceneMode.Single);
 
-        stageLevel++;
     }
     void Update() {
 

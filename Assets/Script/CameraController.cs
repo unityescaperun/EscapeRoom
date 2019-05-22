@@ -12,9 +12,13 @@ public class CameraController : MonoBehaviour {
     public Vector3 maxCameraPos;
 
     void Start() {
+        // 플레이어를 따라다닌다.
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
+    // 카메라 제어. 
+    // 스테이지1 : y축 고정
+    // 스테이지2 ~ : y축 고정 해제
     void FixedUpdate() {
         float posX = Mathf.SmoothDamp(transform.position.x, player.transform.position.x, ref velocity.x, smoothTimeX);
         float posY = 3f;

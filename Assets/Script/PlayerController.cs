@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour {
         rb2D.MovePosition(rb2D.position + MoveVelocity * Time.fixedDeltaTime);
     }
 
+    // 충돌체 박스. 태그가 많아질 예정이다.
+    // 이것도 스테이지에 따라 구분하여 구현할 예정이다.
     void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "PortalUp") {
             Debug.Log("UP");

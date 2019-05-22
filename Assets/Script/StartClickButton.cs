@@ -13,6 +13,6 @@ public class StartClickButton : MonoBehaviour {
     }
 
     public void OnClickExit() {
-        SceneManager.LoadScene("Scene1");
+        SceneManager.LoadScene("1");
     }
 }

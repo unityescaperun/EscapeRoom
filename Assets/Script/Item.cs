@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// 아이템 적용하는곳. 이미지 이름, 이름, id, 설명이 필요하다.
+// 이미지의 경로는 /resources/itemicon/
 [System.Serializable]
 public class Item {
     public string itemName;
