@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
 
     private Inventory inven;
     private Rigidbody2D rb2D;
+    public Dialogue dialogue;
 
     Vector2 MoveVelocity;
     public float Speed = 5f;

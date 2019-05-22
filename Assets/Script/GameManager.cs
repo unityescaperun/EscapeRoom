@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour {
     public MapManager mapScript;
 
     public static int stageLevel = 1;
-    static bool ifEnded = false;
 
     void Awake() {
         if (instance == null)
