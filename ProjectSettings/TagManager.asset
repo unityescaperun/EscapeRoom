@@ -14,6 +14,8 @@ TagManager:
   - PortalDown
   - Item Database
   - inventory
+  - Box1
+  - Box2
   layers:
   - Default
   - TransparentFX

@@ -49,27 +49,25 @@ public class PlayerController : MonoBehaviour {
             player.transform.position = new Vector3(18, 4, 0);
         }
 
-        if (other.tag == "PortalDown") {
+        else if (other.tag == "PortalDown") {
             Debug.Log("DOWN");
             player.transform.position = new Vector3(1, 0, 0);
         }
 
-        if (other.tag == "Item1") {
-            Debug.Log("Get Item1");
-            other.gameObject.SetActive(false);
-            Inventory.instance.AddItem(1001);
-        }
-
-        if (other.tag == "Item2") {
-            Debug.Log("Get Item2");
-            other.gameObject.SetActive(false);
-            Inventory.instance.AddItem(1002);
-        }
-
-        if (other.tag == "Finish") {
+        else if (other.tag == "Finish") {
             Debug.Log("Finish");
             if (Inventory.instance.inventoryContains(2003))
                 GameManager.EndGame();
+        }
+
+        else if (other.tag == "Box1") {
+            FindObjectOfType<DialogueTrigger>().TriggerDialogue();
+            Inventory.instance.AddItem(1001);
+        }
+
+        else if (other.tag == "Box2") {
+            FindObjectOfType<DialogueTrigger>().TriggerDialogue();
+            Inventory.instance.AddItem(1002);
         }
     }
 }

@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 1700126498088491863}
   - component: {fileID: 5691234829573276870}
   - component: {fileID: 2424631335219373481}
+  - component: {fileID: 965418795}
   m_Layer: 8
   m_Name: Box2
-  m_TagString: Item
+  m_TagString: Box2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,3 +107,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
+--- !u!114 &965418795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3889572119079680263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4aec8692d8c5e4888e5d69a87bb860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: asdf
+    sentences:
+    - asdfasdf
+    - asdqeweq

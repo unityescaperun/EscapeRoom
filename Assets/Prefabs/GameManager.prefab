@@ -57,9 +57,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82fd86eb7c0d8444d95f6a2506e84c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  columns: 20
-  rows: 7
+  columns: 7
+  rows: 20
   exit: {fileID: 4193158352040778534, guid: c5b7ccc52705c8b439031b02250b2b4f, type: 3}
   outerWall: {fileID: 7106729483750349531, guid: 52f0cf2ebc8cb7949963506077fc5353,
     type: 3}
   wall: {fileID: 5639897808268184236, guid: 1d8389c482eb34f4a93a977950a35f4a, type: 3}
+  Key: {fileID: 2679411553327677206, guid: 74c051893b274c0469563422cc7bb9c2, type: 3}
+  PortalUp: {fileID: 1829200903810053445, guid: afb45535ceb68354cb000770db3713d8,
+    type: 3}
+  PortalDown: {fileID: 5674903832653008210, guid: b38ad5223f556a54baab0c4a92e801d5,
+    type: 3}
+  Item1: {fileID: 2458399276039047358, guid: 61a3b922329f26d46ac6634ff7820276, type: 3}
+  Item2: {fileID: 2339950590289313151, guid: 37b8c4b34e15a03448309f7e6746f9d0, type: 3}
+  Box1: {fileID: 5862032894632149304, guid: 3db24148a0a0b144fa34477de12494ca, type: 3}
+  Box2: {fileID: 3889572119079680263, guid: 268e3f5f269ee18498f9d4cd03771603, type: 3}
