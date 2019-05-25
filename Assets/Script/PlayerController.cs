@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         else if (other.tag == "Box2") {
-            FindObjectOfType<DialogueTrigger>().TriggerDialogue();
+            DialogueTrigger.instance.TriggerDialogue();
             Inventory.instance.AddItem(1002);
         }
     }
