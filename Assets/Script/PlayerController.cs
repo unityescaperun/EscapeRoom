@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour {
     private Inventory inven;
     private Rigidbody2D rb2D;
     public Dialogue dialogue;
+    public SpriteRenderer render;
 
     Vector2 MoveVelocity;
     public float Speed = 5f;
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour {
     void Start() {
         rb2D = GetComponent<Rigidbody2D>();
         inven = GetComponent<Inventory>();
+        render = gameObject.GetComponentInChildren<SpriteRenderer>();
 
         player = GameObject.FindGameObjectWithTag("Player");
         Key = GameObject.FindGameObjectWithTag("Key");
@@ -24,6 +26,14 @@ public class PlayerController : MonoBehaviour {
 
     void Update() {
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), 0f);
+
+        if (Input.GetAxisRaw("Horizontal") < 0) {
+            render.flipX = true;
+        }
+        else if (Input.GetAxisRaw("Horizontal") > 0) {
+            render.flipX = false;
+        }
+
         MoveVelocity = moveInput.normalized * Speed;
     }
 

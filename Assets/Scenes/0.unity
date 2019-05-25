@@ -291,8 +291,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 497543250}
-        m_MethodName: ExitGameScene
+      - m_Target: {fileID: 497543251}
+        m_MethodName: OnClickExit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -353,6 +353,7 @@ GameObject:
   - component: {fileID: 497543248}
   - component: {fileID: 497543247}
   - component: {fileID: 497543250}
+  - component: {fileID: 497543251}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -434,6 +435,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3091ef28389ce464386dc5b3417e2bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &497543251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497543246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8715938eb96073944a82676fe192133b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &528441118
