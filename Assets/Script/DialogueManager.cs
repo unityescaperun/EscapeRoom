@@ -41,7 +41,17 @@ public class DialogueManager : MonoBehaviour {
         DisplayNextSentence();
     }
 
+    public void StartDialogue2(Message message) {
+        ani.SetBool("isOpen", true);
+        nameText.text = "aa";
+        sentences.Clear();
 
+        foreach (string sentence in message.dialogue.sentences) {
+            sentences.Enqueue(sentence);
+        }
+
+        DisplayNextSentence();
+    }
 
     public void DisplayNextSentence() {
         if (sentences.Count == 0) {

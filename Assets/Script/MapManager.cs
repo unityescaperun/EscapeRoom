@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MapManager : MonoBehaviour {
+    // row : 가로 column : 세로
     public int columns = 7;
     public int rows = 20;
+
+    public int Lev2col = 15;
+    public int Lev2row = 15;
 
     // 모든 스테이지 공용.
     public GameObject exit;
@@ -37,13 +41,14 @@ public class MapManager : MonoBehaviour {
         boardHolder = new GameObject("Board").transform;
         // 스테이지 1
         if (GameManager.stageLevel == 1) {
+            Debug.Log("월드1");
             for (int x = -1; x < rows + 1; x++) {
-                for (int y = -1; y < columns + 1; y++) {
-                    GameObject toinstantiate = wall;
-                    if (x == -1 || x == rows || y == -1 || y == columns || y == 3)
-                        toinstantiate = outerWall;
+                for(int y = -1; y < columns + 1; y++) {
+                    GameObject toInstantiate = wall;
+                    if(x == -1 || x == rows || y == -1 || y == columns || y == 3)
+                        toInstantiate = outerWall;
 
-                    GameObject instance = Instantiate(toinstantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
+                    GameObject instance = Instantiate(toInstantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
 
                     instance.transform.SetParent(boardHolder);
                 }
@@ -52,13 +57,34 @@ public class MapManager : MonoBehaviour {
 
         // 스테이지 2
         else if(GameManager.stageLevel == 2) {
+            Debug.Log("월드2");
+            /*
             for (int x = -1; x < rows + 1; x++) {
-                for (int y = -1; y < columns + 1; y++) {
-                    GameObject toinstantiate = wall;
-                    if (x == -1 || x == rows || y == -1 || y == columns || y == 3 || y == 7)
-                        toinstantiate = outerWall;
+                for(int y = -1; y < columns + 1; y++) {
+                    GameObject toInsatantiate = wall;
+                    if(x == -1 || x == rows || y == -1 || y == columns || y == 3)
+                        toInsatantiate = outerWall;
 
-                    GameObject instance = Instantiate(toinstantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
+                    GameObject instance = Instantiate(toInsatantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
+
+                    instance.transform.SetParent(boardHolder);
+                }
+            }
+            */
+            for(int x = -1; x < Lev2row + 1; x++){
+                for(int y = -1; y < Lev2col + 1; y++) {
+                    GameObject toInstantiate = wall;
+                    if(x == 0 || x == 1 || x == 2 || x == 6 || x == 7 || x == 8 || x == 12 || x == 13 || x == 14)
+                        if(y == -1 || y == 3 || y == 5 || y == 9 || y == 11 || y == Lev2col)
+                            toInstantiate = outerWall;
+
+                    if(x == -1 || x == 3 || x == 5 || x == 9 || x == 11 || x == Lev2row)
+                        if(y == 4 || y == 10)
+                            toInstantiate = wall;
+                        else
+                            toInstantiate = outerWall;
+
+                    GameObject instance = Instantiate(toInstantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
 
                     instance.transform.SetParent(boardHolder);
                 }
@@ -71,6 +97,7 @@ public class MapManager : MonoBehaviour {
         InitialiseList();
 
         // 스테이지 1 오브젝트 구현
+        
         if (GameManager.stageLevel == 1) {
             Instantiate(exit, new Vector3(rows - 1, columns - 7, 0f), Quaternion.identity);
             Instantiate(PortalUp, new Vector3(0, columns - 7, 0f), Quaternion.identity);
@@ -78,5 +105,6 @@ public class MapManager : MonoBehaviour {
             Instantiate(Box1, new Vector3(7, columns - 3, 0f), Quaternion.identity);
             Instantiate(Box2, new Vector3(3, columns - 7, 0f), Quaternion.identity);
         }
+        
     }
 }
