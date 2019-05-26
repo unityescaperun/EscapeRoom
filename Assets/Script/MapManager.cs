@@ -20,6 +20,10 @@ public class MapManager : MonoBehaviour {
     // 스테이지 1 사용.
     public GameObject PortalUp;
     public GameObject PortalDown;
+    public GameObject Door1_1;
+    public GameObject Door1_2;
+    public GameObject Door2_1;
+    public GameObject Door2_2;
     public GameObject Item1;
     public GameObject Item2;
     public GameObject Box1;
@@ -103,6 +107,11 @@ public class MapManager : MonoBehaviour {
             Instantiate(Window1, new Vector3(16, columns - 2, 0f), Quaternion.identity);
             Instantiate(Fireplace, new Vector3(16, columns - 7, 0f), Quaternion.identity);
         }
-        
+        else if(GameManager.stageLevel == 2) {
+            Instantiate(Door1_1, new Vector3(7, 0, 0f), Quaternion.identity);
+            Instantiate(Door1_2, new Vector3(11, 0, 0f), Quaternion.identity);
+            Instantiate(Door2_1, new Vector3(18, 0, 0f), Quaternion.identity);
+            Instantiate(Door2_2, new Vector3(22, 0, 0f), Quaternion.identity);
+        }  
     }
 }
