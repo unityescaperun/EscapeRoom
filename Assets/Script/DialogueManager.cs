@@ -45,7 +45,7 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Message message) {
         ani.SetBool("isOpen", true);
-        nameText.text = message.name;
+        nameText.text = message.dialogue.name;
         sentences.Clear();
 
         foreach (string sentence in message.dialogue.sentences) {
