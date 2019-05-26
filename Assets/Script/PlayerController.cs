@@ -117,6 +117,11 @@ public class PlayerController : MonoBehaviour {
             Inventory.instance.AddItem(1002);
             Destroy(other);
         }
+
+        else if (other.tag == "NPC" && inputKey == true) {
+            Debug.Log("NPC");
+            FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+        }
     }
 }
 
