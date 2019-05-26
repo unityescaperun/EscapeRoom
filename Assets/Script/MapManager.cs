@@ -70,7 +70,7 @@ public class MapManager : MonoBehaviour {
 
                     instance.transform.SetParent(boardHolder);
                 }
-            }         
+            }          
         }
     }
 
