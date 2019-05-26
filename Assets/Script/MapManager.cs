@@ -7,8 +7,7 @@ public class MapManager : MonoBehaviour {
     public int columns = 7;
     public int rows = 20;
 
-    public int Lev2col = 15;
-    public int Lev2row = 15;
+    bool DoorOpen = false;
 
     // 모든 스테이지 공용.
     public GameObject exit;
@@ -23,6 +22,8 @@ public class MapManager : MonoBehaviour {
     public GameObject Item2;
     public GameObject Box1;
     public GameObject Box2;
+    public GameObject Window1;
+    public GameObject Fireplace;
 
     private Transform boardHolder;
     private List<Vector3> gridPosition = new List<Vector3>();
@@ -39,6 +40,7 @@ public class MapManager : MonoBehaviour {
     // 배경 맵 구현. GameManager의 stageLevel에 따라 맵 구현을 다르게 해준다.
     void Boardsetup() {
         boardHolder = new GameObject("Board").transform;
+
         // 스테이지 1
         if (GameManager.stageLevel == 1) {
             Debug.Log("월드1");
@@ -58,7 +60,6 @@ public class MapManager : MonoBehaviour {
         // 스테이지 2
         else if(GameManager.stageLevel == 2) {
             Debug.Log("월드2");
-            /*
             for (int x = -1; x < rows + 1; x++) {
                 for(int y = -1; y < columns + 1; y++) {
                     GameObject toInsatantiate = wall;
@@ -69,26 +70,7 @@ public class MapManager : MonoBehaviour {
 
                     instance.transform.SetParent(boardHolder);
                 }
-            }
-            */
-            for(int x = -1; x < Lev2row + 1; x++){
-                for(int y = -1; y < Lev2col + 1; y++) {
-                    GameObject toInstantiate = wall;
-                    if(x == 0 || x == 1 || x == 2 || x == 6 || x == 7 || x == 8 || x == 12 || x == 13 || x == 14)
-                        if(y == -1 || y == 3 || y == 5 || y == 9 || y == 11 || y == Lev2col)
-                            toInstantiate = outerWall;
-
-                    if(x == -1 || x == 3 || x == 5 || x == 9 || x == 11 || x == Lev2row)
-                        if(y == 4 || y == 10)
-                            toInstantiate = wall;
-                        else
-                            toInstantiate = outerWall;
-
-                    GameObject instance = Instantiate(toInstantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
-
-                    instance.transform.SetParent(boardHolder);
-                }
-            }
+            }         
         }
     }
 
@@ -96,14 +78,23 @@ public class MapManager : MonoBehaviour {
         Boardsetup();
         InitialiseList();
 
-        // 스테이지 1 오브젝트 구현
-        
+        // 스테이지 1 오브젝트 구현     
         if (GameManager.stageLevel == 1) {
             Instantiate(exit, new Vector3(rows - 1, columns - 7, 0f), Quaternion.identity);
             Instantiate(PortalUp, new Vector3(0, columns - 7, 0f), Quaternion.identity);
             Instantiate(PortalDown, new Vector3(19, columns - 3, 0f), Quaternion.identity);
             Instantiate(Box1, new Vector3(7, columns - 3, 0f), Quaternion.identity);
             Instantiate(Box2, new Vector3(3, columns - 7, 0f), Quaternion.identity);
+            Instantiate(Window1, new Vector3(0, columns - 2, 0f), Quaternion.identity);
+            Instantiate(Window1, new Vector3(2, columns - 2, 0f), Quaternion.identity);
+            Instantiate(Window1, new Vector3(4, columns - 2, 0f), Quaternion.identity);
+            Instantiate(Window1, new Vector3(6, columns - 2, 0f), Quaternion.identity);
+            Instantiate(Window1, new Vector3(8, columns - 2, 0f), Quaternion.identity);
+            Instantiate(Window1, new Vector3(10, columns - 2, 0f), Quaternion.identity);
+            Instantiate(Window1, new Vector3(12, columns - 2, 0f), Quaternion.identity);
+            Instantiate(Window1, new Vector3(14, columns - 2, 0f), Quaternion.identity);
+            Instantiate(Window1, new Vector3(16, columns - 2, 0f), Quaternion.identity);
+            Instantiate(Fireplace, new Vector3(16, columns - 7, 0f), Quaternion.identity);
         }
         
     }
