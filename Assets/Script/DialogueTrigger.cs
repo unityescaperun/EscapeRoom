@@ -11,13 +11,6 @@ public class DialogueTrigger : MonoBehaviour {
         instance = this;
     }
 
-    /*
-    public void TriggerDialogue() {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-        // DialogueManager.instance.StartDialogue(dialogue);
-    }
-    */
-
     public void TriggerDialogue(Message message) {
         FindObjectOfType<DialogueManager>().StartDialogue(message);
         // DialogueManager.instance.StartDialogue(dialogue);
