@@ -20,10 +20,6 @@ public class MapManager : MonoBehaviour {
     // 스테이지 1 사용.
     public GameObject PortalUp;
     public GameObject PortalDown;
-    public GameObject Door1_1;
-    public GameObject Door1_2;
-    public GameObject Door2_1;
-    public GameObject Door2_2;
     public GameObject Item1;
     public GameObject Item2;
     public GameObject Box1;
@@ -31,6 +27,14 @@ public class MapManager : MonoBehaviour {
     public GameObject Window1;
     public GameObject Window2;
     public GameObject Fireplace;
+
+    // 스테이지 2 사용
+    public GameObject Door1_1;
+    public GameObject Door1_2;
+    public GameObject Door2_1;
+    public GameObject Door2_2;
+    public GameObject NPC;
+    
 
     private Transform boardHolder;
     private List<Vector3> gridPosition = new List<Vector3>();
@@ -112,6 +116,7 @@ public class MapManager : MonoBehaviour {
             Instantiate(Door1_2, new Vector3(16, 0, 0f), Quaternion.identity);
             Instantiate(Door2_1, new Vector3(28, 0, 0f), Quaternion.identity);
             Instantiate(Door2_2, new Vector3(32, 0, 0f), Quaternion.identity);
+            Instantiate(NPC, new Vector3(23, 0, 0f), Quaternion.identity);
         }  
     }
 }

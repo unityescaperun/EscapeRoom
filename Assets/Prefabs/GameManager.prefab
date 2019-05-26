@@ -57,10 +57,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82fd86eb7c0d8444d95f6a2506e84c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  columns: 7
-  rows: 20
-  columns2: 5
-  rows2: 30
   exit: {fileID: 4193158352040778534, guid: c5b7ccc52705c8b439031b02250b2b4f, type: 3}
   outerWall: {fileID: 7106729483750349531, guid: 52f0cf2ebc8cb7949963506077fc5353,
     type: 3}
@@ -70,10 +66,6 @@ MonoBehaviour:
     type: 3}
   PortalDown: {fileID: 5674903832653008210, guid: b38ad5223f556a54baab0c4a92e801d5,
     type: 3}
-  Door1_1: {fileID: 1829200903810053445, guid: f3b1f35193650cc4cb52e4a67eeb6b6f, type: 3}
-  Door1_2: {fileID: 1829200903810053445, guid: b581d918265b4f24caca9519fa45c7fd, type: 3}
-  Door2_1: {fileID: 1829200903810053445, guid: a27325d6630741e47b306b3538dc73dc, type: 3}
-  Door2_2: {fileID: 1829200903810053445, guid: 3daf05ae0e756ad4eaa8bc391a2fd4c9, type: 3}
   Item1: {fileID: 2458399276039047358, guid: 61a3b922329f26d46ac6634ff7820276, type: 3}
   Item2: {fileID: 2339950590289313151, guid: 37b8c4b34e15a03448309f7e6746f9d0, type: 3}
   Box1: {fileID: 4682704996079907160, guid: 3db24148a0a0b144fa34477de12494ca, type: 3}
@@ -82,3 +74,8 @@ MonoBehaviour:
   Window2: {fileID: 3408745419330640927, guid: 8eec83345651ad945a34c15b2d001911, type: 3}
   Fireplace: {fileID: 3021941232062453880, guid: 6f36b1416d549c744aea5e36609e1c64,
     type: 3}
+  Door1_1: {fileID: 1829200903810053445, guid: f3b1f35193650cc4cb52e4a67eeb6b6f, type: 3}
+  Door1_2: {fileID: 1829200903810053445, guid: b581d918265b4f24caca9519fa45c7fd, type: 3}
+  Door2_1: {fileID: 1829200903810053445, guid: a27325d6630741e47b306b3538dc73dc, type: 3}
+  Door2_2: {fileID: 1829200903810053445, guid: 3daf05ae0e756ad4eaa8bc391a2fd4c9, type: 3}
+  NPC: {fileID: 8081189033817828070, guid: 8dc0b4726c6e1374fbedf5006f708bb2, type: 3}
