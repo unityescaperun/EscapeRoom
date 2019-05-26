@@ -6,6 +6,8 @@ public class MapManager : MonoBehaviour {
     // row : 가로 column : 세로
     public int columns = 7;
     public int rows = 20;
+    public int columns2 = 5;
+    public int rows2 = 30;
 
     bool DoorOpen = false;
 
@@ -60,11 +62,16 @@ public class MapManager : MonoBehaviour {
         // 스테이지 2
         else if(GameManager.stageLevel == 2) {
             Debug.Log("월드2");
-            for (int x = -1; x < rows + 1; x++) {
-                for(int y = -1; y < columns + 1; y++) {
+            for (int x = -1; x < rows2 + 1; x++) {
+                for(int y = -1; y < columns2 + 1; y++) {
                     GameObject toInsatantiate = wall;
-                    if(x == -1 || x == rows || y == -1 || y == columns || y == 3)
+                    if(x == -1 || x == 8 || x == 10 || x == 19 || x == 21 || x == rows2)
                         toInsatantiate = outerWall;
+                    else if(x == 9 || x == 20)
+                        continue;
+                    else
+                        if(y == -1 || y == columns2)
+                            toInsatantiate = outerWall;
 
                     GameObject instance = Instantiate(toInsatantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
 
