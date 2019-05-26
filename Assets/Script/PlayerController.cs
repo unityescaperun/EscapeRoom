@@ -59,7 +59,10 @@ public class PlayerController : MonoBehaviour {
             if (Inventory.instance.inventoryContains(2003))
                 GameManager.EndGame();
             else
-                DialogueTrigger_Warning.instance.TriggerDialogue();
+            {
+                //DialogueTrigger_Warning.instance.TriggerDialogue();
+                FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+            }
         }
 
         else if (other.tag == "Box1") {

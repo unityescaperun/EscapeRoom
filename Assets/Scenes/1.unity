@@ -369,6 +369,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Box1
+      value: 
+      objectReference: {fileID: 4682704996079907160, guid: 3db24148a0a0b144fa34477de12494ca,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Box2
+      value: 
+      objectReference: {fileID: 1887154696087404104, guid: 268e3f5f269ee18498f9d4cd03771603,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c1dde809e361c4bb166750be9c8894, type: 3}
 --- !u!1 &519420028
@@ -938,6 +950,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1460635896233642602, guid: bcc79a5d6a3c4604f8ad8fdec2c4ede5,
+        type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 1819425507}
+    - target: {fileID: 1460635896233642602, guid: bcc79a5d6a3c4604f8ad8fdec2c4ede5,
+        type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 239597552}
+    - target: {fileID: 1460635896233642602, guid: bcc79a5d6a3c4604f8ad8fdec2c4ede5,
+        type: 3}
+      propertyPath: ani
+      value: 
+      objectReference: {fileID: 1068385927}
     - target: {fileID: 1460635896233642601, guid: bcc79a5d6a3c4604f8ad8fdec2c4ede5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -993,21 +1020,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1460635896233642602, guid: bcc79a5d6a3c4604f8ad8fdec2c4ede5,
-        type: 3}
-      propertyPath: nameText
-      value: 
-      objectReference: {fileID: 1819425507}
-    - target: {fileID: 1460635896233642602, guid: bcc79a5d6a3c4604f8ad8fdec2c4ede5,
-        type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 239597552}
-    - target: {fileID: 1460635896233642602, guid: bcc79a5d6a3c4604f8ad8fdec2c4ede5,
-        type: 3}
-      propertyPath: ani
-      value: 
-      objectReference: {fileID: 1068385927}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcc79a5d6a3c4604f8ad8fdec2c4ede5, type: 3}
 --- !u!1001 &2955414911890379066

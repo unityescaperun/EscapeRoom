@@ -10,9 +10,10 @@ public class DialogueTrigger_Warning : MonoBehaviour {
     private void Start() {
         instance = this;
     }
-
-    public void TriggerDialogue() {
+    /*
+    public void TriggerDialogue_warning() {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         // DialogueManager.instance.StartDialogue(dialogue);
     }
+    */
 }

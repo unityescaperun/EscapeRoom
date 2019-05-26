@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6395328228132649464}
   - component: {fileID: 1835839990189003832}
   - component: {fileID: 5844319039061426897}
-  - component: {fileID: 3892790408076783375}
+  - component: {fileID: 3443369726019794367}
   m_Layer: 8
   m_Name: Box1
   m_TagString: Box1
@@ -19,7 +19,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-
 --- !u!4 &6395328228132649464
 Transform:
   m_ObjectHideFlags: 0
@@ -34,7 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-
 --- !u!61 &1835839990189003832
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -61,7 +59,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.33, y: 0.32}
   m_EdgeRadius: 0
-  
 --- !u!212 &5844319039061426897
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -110,7 +107,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3892790408076783375
+--- !u!114 &3443369726019794367
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,29 +116,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 4682704996079907160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6a7cc1b4f8599e409b3c27979857ce6, type: 3}
+  m_Script: {fileID: 11500000, guid: a17e14f66af6b0f4e8218bda7759ed46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-
   dialogue:
-    name: Box
+    name: Box1
     sentences:
-    - "Item\uC744 \uCC3E\uC558\uB2E4!"
---- !u!222 &610202466051700698
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5862032894632149304}
-  m_CullTransparentMesh: 0
+    - Box1
 --- !u!114 &3288150734231608962
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5862032894632149304}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a17e14f66af6b0f4e8218bda7759ed46, type: 3}
@@ -149,7 +137,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: 
-    sentences:
-    - hi
-    - box1
-
+    sentences: []
