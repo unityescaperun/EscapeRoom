@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         else if (other.tag == "Box1") {
-
+            Debug.Log(other.GetComponent<Message>().dialogue.name);
             FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
 
             Inventory.instance.AddItem(1001);
@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         else if (other.tag == "Box2") {
-
+            Debug.Log("Box2");
             FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
             //DialogueTrigger.instance.TriggerDialogue();
 

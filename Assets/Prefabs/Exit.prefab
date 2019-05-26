@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 995514074516367758}
   - component: {fileID: 8224074688899649384}
   - component: {fileID: 627821422048261325}
-  - component: {fileID: 1223065979665238273}
+  - component: {fileID: 1625036245281634826}
   m_Layer: 8
   m_Name: Exit
   m_TagString: Finish
@@ -107,7 +107,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1223065979665238273
+--- !u!114 &1625036245281634826
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,12 +116,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4193158352040778534}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f4aec8692d8c5e4888e5d69a87bb860, type: 3}
+  m_Script: {fileID: 11500000, guid: a17e14f66af6b0f4e8218bda7759ed46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: "\uACBD\uACE0\uBB38"
+    name: Exit
     sentences:
-    - "1. \uD0A4 \uC5C6\uC774 \uBB38\uC744 \uC5F4\uB824\uACE0 \uD558\uC9C0 \uB9C8\uC2DC\uC624."
-    - "2. \uD78C\uD2B8\uB97C \uCC3E\uC544 \uBC16\uC73C\uB85C \uB098\uAC00\uC2DC\uC624."
-    - "3. \uC0DD\uAC01\uBCF4\uB2E4 \uC26C\uC6CC\uC694~"
+    - "\uB098\uAC11\uC2DC\uB2E4"
