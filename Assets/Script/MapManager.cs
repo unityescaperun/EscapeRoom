@@ -29,6 +29,7 @@ public class MapManager : MonoBehaviour {
     public GameObject Box1;
     public GameObject Box2;
     public GameObject Window1;
+    public GameObject Window2;
     public GameObject Fireplace;
 
     private Transform boardHolder;
@@ -100,8 +101,7 @@ public class MapManager : MonoBehaviour {
             Instantiate(Window1, new Vector3(2, columns - 2, 0f), Quaternion.identity);
             Instantiate(Window1, new Vector3(4, columns - 2, 0f), Quaternion.identity);
             Instantiate(Window1, new Vector3(6, columns - 2, 0f), Quaternion.identity);
-            Instantiate(Window1, new Vector3(8, columns - 2, 0f), Quaternion.identity);
-            Instantiate(Window1, new Vector3(10, columns - 2, 0f), Quaternion.identity);
+            Instantiate(Window2, new Vector3(10, columns - 2, 0f), Quaternion.identity);
             Instantiate(Window1, new Vector3(12, columns - 2, 0f), Quaternion.identity);
             Instantiate(Window1, new Vector3(14, columns - 2, 0f), Quaternion.identity);
             Instantiate(Window1, new Vector3(16, columns - 2, 0f), Quaternion.identity);

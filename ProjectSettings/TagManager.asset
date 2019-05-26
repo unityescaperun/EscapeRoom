@@ -17,11 +17,15 @@ TagManager:
   - Box1
   - Box2
   - Window_1
+
   - Portal
   - Door1_1
   - Door1_2
   - Door2_1
   - Door2_2
+  - FirePlace
+  - Window_2
+
   layers:
   - Default
   - TransparentFX
