@@ -58,12 +58,13 @@ public class PlayerController : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "PortalUp") {
             Debug.Log("UP");
-            player.transform.position = new Vector3(18, 4, 0);
+            FindObjectOfType<PortalController>().Teleport(player, other.GetComponent<PortalPosition>());
         }
 
         else if (other.tag == "PortalDown") {
             Debug.Log("DOWN");
-            player.transform.position = new Vector3(1, 0, 0);
+            //player.transform.position = new Vector3(1, 0, 0);
+            FindObjectOfType<PortalController>().Teleport(player, other.GetComponent<PortalPosition>());
         }
     }
 
@@ -76,6 +77,13 @@ public class PlayerController : MonoBehaviour {
                 //DialogueTrigger_Warning.instance.TriggerDialogue();
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
             }
+        }
+       
+        else if (other.tag == "Portal") {
+            Debug.Log(other.name);
+            FindObjectOfType<SpriteController>().ChangeSprite(other);
+            FindObjectOfType<PortalController>().Teleport(player, other.GetComponent<PortalPosition>());
+            
         }
 
         else if (other.tag == "Box1" && inputKey == true) {
