@@ -16,6 +16,7 @@ TagManager:
   - inventory
   - Box1
   - Box2
+  - Window_1
   layers:
   - Default
   - TransparentFX
