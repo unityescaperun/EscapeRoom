@@ -19,6 +19,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+  
 --- !u!4 &4821013761161458007
 Transform:
   m_ObjectHideFlags: 0
@@ -33,6 +34,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+
 --- !u!61 &957999092752534854
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -60,6 +62,7 @@ BoxCollider2D:
   m_Size: {x: 0.33, y: 0.32}
   m_EdgeRadius: 0
 --- !u!212 &2144473240686604074
+
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,4 +125,30 @@ MonoBehaviour:
   dialogue:
     name: "\uB098\uBB34 \uC0C1\uC790"
     sentences:
-    - "\uC544\uC774\uD15C\uC744 \uBC1C\uACAC\uD558\uC600\uB2E4!"
+    - asdfasdf
+    - asdqeweq
+--- !u!222 &3703548123995448588
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3889572119079680263}
+  m_CullTransparentMesh: 0
+--- !u!114 &8400002997778042710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3889572119079680263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17e14f66af6b0f4e8218bda7759ed46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences:
+    - hello
+    - box2

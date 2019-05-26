@@ -63,13 +63,18 @@ public class PlayerController : MonoBehaviour {
         }
 
         else if (other.tag == "Box1") {
-            DialogueTrigger_Box.instance.TriggerDialogue();
+
+            FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+
             Inventory.instance.AddItem(1001);
             Destroy(other);
         }
 
         else if (other.tag == "Box2") {
-            DialogueTrigger_Box.instance.TriggerDialogue();
+
+            FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+            //DialogueTrigger.instance.TriggerDialogue();
+
             Inventory.instance.AddItem(1002);
             Destroy(other);
         }

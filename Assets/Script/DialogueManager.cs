@@ -29,6 +29,7 @@ public class DialogueManager : MonoBehaviour {
         }
     }
 
+    /*
     public void StartDialogue(Dialogue dialogue) {
         ani.SetBool("isOpen", true);
         nameText.text = dialogue.name;
@@ -40,8 +41,19 @@ public class DialogueManager : MonoBehaviour {
 
         DisplayNextSentence();
     }
+    */
 
+    public void StartDialogue(Message message) {
+        ani.SetBool("isOpen", true);
+        nameText.text = "aa";
+        sentences.Clear();
 
+        foreach (string sentence in message.dialogue.sentences) {
+            sentences.Enqueue(sentence);
+        }
+
+        DisplayNextSentence();
+    }
 
     public void DisplayNextSentence() {
         if (sentences.Count == 0) {

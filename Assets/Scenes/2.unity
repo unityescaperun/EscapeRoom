@@ -306,6 +306,11 @@ PrefabInstance:
       propertyPath: rows
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: columns
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c1dde809e361c4bb166750be9c8894, type: 3}
 --- !u!1 &519420028
