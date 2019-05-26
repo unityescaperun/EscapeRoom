@@ -59,6 +59,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   columns: 7
   rows: 20
+  columns2: 5
+  rows2: 30
   exit: {fileID: 4193158352040778534, guid: c5b7ccc52705c8b439031b02250b2b4f, type: 3}
   outerWall: {fileID: 7106729483750349531, guid: 52f0cf2ebc8cb7949963506077fc5353,
     type: 3}
@@ -68,6 +70,10 @@ MonoBehaviour:
     type: 3}
   PortalDown: {fileID: 5674903832653008210, guid: b38ad5223f556a54baab0c4a92e801d5,
     type: 3}
+  Door1_1: {fileID: 1829200903810053445, guid: f3b1f35193650cc4cb52e4a67eeb6b6f, type: 3}
+  Door1_2: {fileID: 1829200903810053445, guid: b581d918265b4f24caca9519fa45c7fd, type: 3}
+  Door2_1: {fileID: 1829200903810053445, guid: a27325d6630741e47b306b3538dc73dc, type: 3}
+  Door2_2: {fileID: 1829200903810053445, guid: 3daf05ae0e756ad4eaa8bc391a2fd4c9, type: 3}
   Item1: {fileID: 2458399276039047358, guid: 61a3b922329f26d46ac6634ff7820276, type: 3}
   Item2: {fileID: 2339950590289313151, guid: 37b8c4b34e15a03448309f7e6746f9d0, type: 3}
   Box1: {fileID: 4682704996079907160, guid: 3db24148a0a0b144fa34477de12494ca, type: 3}
