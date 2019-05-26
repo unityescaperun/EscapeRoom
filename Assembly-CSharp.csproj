@@ -60,11 +60,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\BoxObject.cs" />
     <Compile Include="Assets\Script\CameraController.cs" />
     <Compile Include="Assets\Script\Dialogue.cs" />
     <Compile Include="Assets\Script\DialogueManager.cs" />
-    <Compile Include="Assets\Script\DialogueTrigger\DialogueTrigger.cs" />
+    <Compile Include="Assets\Script\DialogueTrigger_Box.cs" />
+    <Compile Include="Assets\Script\DialogueTrigger_Warning.cs" />
     <Compile Include="Assets\Script\ExitClickButton.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\Inventory.cs" />

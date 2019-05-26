@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueTrigger : MonoBehaviour {
+public class DialogueTrigger_Box : MonoBehaviour {
     public Dialogue dialogue;
-    
-    public static DialogueTrigger instance = null;
+
+    public static DialogueTrigger_Box instance = null;
 
     private void Start() {
         instance = this;
