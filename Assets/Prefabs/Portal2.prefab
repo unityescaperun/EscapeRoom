@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7706680108321700190}
   m_Layer: 8
   m_Name: Portal2
-  m_TagString: PortalDown
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

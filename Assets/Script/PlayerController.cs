@@ -65,6 +65,13 @@ public class PlayerController : MonoBehaviour {
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
             }
         }
+       
+        else if (other.tag == "Portal") {
+            Debug.Log(other.name);
+            FindObjectOfType<SpriteController>().ChangeSprite(other);
+            FindObjectOfType<PortalController>().Teleport(player, other.GetComponent<PortalPosition>());
+            
+        }
 
         else if (other.tag == "Box1") {
             Debug.Log(other.GetComponent<Message>().dialogue.name);

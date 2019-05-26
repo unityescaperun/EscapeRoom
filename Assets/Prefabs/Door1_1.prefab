@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4071222329003977183}
   m_Layer: 8
   m_Name: Door1_1
-  m_TagString: Door1_1
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,5 +119,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caa53040546e604478da48e357177ec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xPos: 18
-  yPos: 4
+  xPos: 13
+  yPos: 0
