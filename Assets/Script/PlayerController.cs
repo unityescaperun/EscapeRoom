@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour {
     private Animator animator;
     GameObject player;
     GameObject Key;
+    bool inputKey;
+    bool solveProblem;
 
     private Inventory inven;
     private Rigidbody2D rb2D;
@@ -20,6 +22,9 @@ public class PlayerController : MonoBehaviour {
         inven = GetComponent<Inventory>();
         render = gameObject.GetComponentInChildren<SpriteRenderer>();
 
+        inputKey = false;
+        solveProblem = false;
+
         player = GameObject.FindGameObjectWithTag("Player");
         Key = GameObject.FindGameObjectWithTag("Key");
     }
@@ -33,8 +38,15 @@ public class PlayerController : MonoBehaviour {
         else if (Input.GetAxisRaw("Horizontal") > 0) {
             render.flipX = false;
         }
-
         MoveVelocity = moveInput.normalized * Speed;
+
+        if (Input.GetKeyDown(KeyCode.W)) {
+            inputKey = true;
+            Debug.Log("KeyDownK");
+        }
+        else if (Input.GetKeyUp(KeyCode.W)){
+            inputKey = false;
+        }
     }
 
     void FixedUpdate() {
@@ -53,19 +65,20 @@ public class PlayerController : MonoBehaviour {
             Debug.Log("DOWN");
             player.transform.position = new Vector3(1, 0, 0);
         }
+    }
 
-        else if (other.tag == "Finish") {
+    void OnTriggerStay2D(Collider2D other) { 
+        if (other.tag == "Finish" && inputKey == true) {
             Debug.Log("Finish");
             if (Inventory.instance.inventoryContains(2003))
                 GameManager.EndGame();
-            else
-            {
+            else {
                 //DialogueTrigger_Warning.instance.TriggerDialogue();
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
             }
         }
 
-        else if (other.tag == "Box1") {
+        else if (other.tag == "Box1" && inputKey == true) {
             Debug.Log(other.GetComponent<Message>().dialogue.name);
             FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
 
@@ -73,7 +86,33 @@ public class PlayerController : MonoBehaviour {
             Destroy(other);
         }
 
-        else if (other.tag == "Box2") {
+        else if (other.tag == "FirePlace" && inputKey == true) {
+            Debug.Log(other.GetComponent<Message>().dialogue.name);
+            FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+
+            if (Inventory.instance.inventoryContains(2003) && !Inventory.instance.inventoryContains(2007))
+                Inventory.instance.AddItem(2007);
+
+            solveProblem = true;
+        }
+
+        else if (other.tag == "Window_1" && inputKey == true && solveProblem == true && Inventory.instance.inventoryContains(2007)) {
+            Debug.Log(other.GetComponent<Message>().dialogue.name);
+            FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+
+            solveProblem = false;
+        }
+
+        else if (other.tag == "Window_2" && inputKey == true && solveProblem == true && Inventory.instance.inventoryContains(2007)) {
+            Debug.Log(other.GetComponent<Message>().dialogue.name);
+            FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+
+            if (!Inventory.instance.inventoryContains(2009))
+                Inventory.instance.AddItem(2009);
+            
+        }
+
+        else if (other.tag == "Box2" && inputKey == true) {
             Debug.Log("Box2");
             FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
             //DialogueTrigger.instance.TriggerDialogue();
@@ -83,3 +122,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 }
+
+    
+
+
