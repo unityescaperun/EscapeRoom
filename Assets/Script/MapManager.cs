@@ -6,6 +6,8 @@ public class MapManager : MonoBehaviour {
     // row : 가로 column : 세로
     public int columns = 7;
     public int rows = 20;
+    public int columns2 = 5;
+    public int rows2 = 30;
 
     bool DoorOpen = false;
 
@@ -18,11 +20,16 @@ public class MapManager : MonoBehaviour {
     // 스테이지 1 사용.
     public GameObject PortalUp;
     public GameObject PortalDown;
+    public GameObject Door1_1;
+    public GameObject Door1_2;
+    public GameObject Door2_1;
+    public GameObject Door2_2;
     public GameObject Item1;
     public GameObject Item2;
     public GameObject Box1;
     public GameObject Box2;
     public GameObject Window1;
+    public GameObject Window2;
     public GameObject Fireplace;
 
     private Transform boardHolder;
@@ -52,7 +59,7 @@ public class MapManager : MonoBehaviour {
 
                     GameObject instance = Instantiate(toInstantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
 
-                    instance.transform.SetParent(boardHolder);
+                    instance.transform.SetParent(boardHolder); 
                 }
             }
         }
@@ -60,17 +67,22 @@ public class MapManager : MonoBehaviour {
         // 스테이지 2
         else if(GameManager.stageLevel == 2) {
             Debug.Log("월드2");
-            for (int x = -1; x < rows + 1; x++) {
-                for(int y = -1; y < columns + 1; y++) {
+            for (int x = -1; x < rows2 + 1; x++) {
+                for(int y = -1; y < columns2 + 1; y++) {
                     GameObject toInsatantiate = wall;
-                    if(x == -1 || x == rows || y == -1 || y == columns || y == 3)
+                    if(x == -1 || x == 8 || x == 10 || x == 19 || x == 21 || x == rows2)
                         toInsatantiate = outerWall;
+                    else if(x == 9 || x == 20)
+                        continue;
+                    else
+                        if(y == -1 || y == columns2)
+                            toInsatantiate = outerWall;
 
                     GameObject instance = Instantiate(toInsatantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
 
                     instance.transform.SetParent(boardHolder);
                 }
-            }         
+            }          
         }
     }
 
@@ -89,13 +101,17 @@ public class MapManager : MonoBehaviour {
             Instantiate(Window1, new Vector3(2, columns - 2, 0f), Quaternion.identity);
             Instantiate(Window1, new Vector3(4, columns - 2, 0f), Quaternion.identity);
             Instantiate(Window1, new Vector3(6, columns - 2, 0f), Quaternion.identity);
-            Instantiate(Window1, new Vector3(8, columns - 2, 0f), Quaternion.identity);
-            Instantiate(Window1, new Vector3(10, columns - 2, 0f), Quaternion.identity);
+            Instantiate(Window2, new Vector3(10, columns - 2, 0f), Quaternion.identity);
             Instantiate(Window1, new Vector3(12, columns - 2, 0f), Quaternion.identity);
             Instantiate(Window1, new Vector3(14, columns - 2, 0f), Quaternion.identity);
             Instantiate(Window1, new Vector3(16, columns - 2, 0f), Quaternion.identity);
             Instantiate(Fireplace, new Vector3(16, columns - 7, 0f), Quaternion.identity);
         }
-        
+        else if(GameManager.stageLevel == 2) {
+            Instantiate(Door1_1, new Vector3(7, 0, 0f), Quaternion.identity);
+            Instantiate(Door1_2, new Vector3(11, 0, 0f), Quaternion.identity);
+            Instantiate(Door2_1, new Vector3(18, 0, 0f), Quaternion.identity);
+            Instantiate(Door2_2, new Vector3(22, 0, 0f), Quaternion.identity);
+        }  
     }
 }
