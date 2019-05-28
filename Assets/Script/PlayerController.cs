@@ -60,6 +60,7 @@ public class PlayerController : MonoBehaviour {
             Debug.Log(other.name);
             FindObjectOfType<SpriteController>().ChangeSprite(other);
             FindObjectOfType<PortalController>().Teleport(player, other.GetComponent<PortalPosition>());
+            //FindObjectOfType<SoundManager>().PlaySingle(other.GetComponent<AudioClip>());
             
         }
     }
