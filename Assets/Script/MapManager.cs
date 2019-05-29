@@ -8,6 +8,8 @@ public class MapManager : MonoBehaviour {
     int rows = 20;
     int columns2 = 5;
     int rows2 = 45;
+    int columns3 = 11;
+    int rows3 = 29;
 
     bool DoorOpen = false;
 
@@ -87,6 +89,26 @@ public class MapManager : MonoBehaviour {
                     instance.transform.SetParent(boardHolder);
                 }
             }          
+        }
+
+        // 스테이지 3
+        else if (GameManager.stageLevel == 3) {
+            Debug.Log("월드3");
+            for (int x = -1; x < rows3 + 1; x++) {
+                for (int y = -1; y < columns3 + 1; y++) {
+                    GameObject toInsatantiate = wall;
+                    if (x == -1 || x == 13 || x == 15 || x == rows3)
+                        toInsatantiate = outerWall;
+                    else if (x == 14 || x == 30 )
+                        continue;
+                    else if (y == -1 || y == 5 || y == columns3)
+                        toInsatantiate = outerWall;
+
+                    GameObject instance = Instantiate(toInsatantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
+
+                    instance.transform.SetParent(boardHolder);
+                }
+            }
         }
     }
 
