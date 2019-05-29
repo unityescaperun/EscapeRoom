@@ -12,7 +12,7 @@ UnityGenerated/
  
 Library/
  
- 
+*.sqlite
  
 # ===================================== #
  
@@ -40,7 +40,7 @@ ExportedObj/
  
 *.booproj
  
- 
+*.sqlite
  
 # ============ #
  
@@ -70,7 +70,7 @@ ProjectSettings.asset
  
 ProjectVersion.txt
 
+*.sqlite
 
-ÃâÃ³: https://minhyeokism.tistory.com/67 [programmer-dominic.kim]
 /.vs/Unity_EscapeRoom/v15
 /.vs
