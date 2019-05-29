@@ -56,34 +56,24 @@ public class PlayerController : MonoBehaviour {
     // 충돌체 박스. 태그가 많아질 예정이다.
     // 이것도 스테이지에 따라 구분하여 구현할 예정이다.
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "PortalUp") {
-            Debug.Log("UP");
+        if (other.tag == "Portal") {
+            Debug.Log(other.name);
+            FindObjectOfType<SpriteController>().ChangeSprite(other);
             FindObjectOfType<PortalController>().Teleport(player, other.GetComponent<PortalPosition>());
-        }
-
-        else if (other.tag == "PortalDown") {
-            Debug.Log("DOWN");
-            //player.transform.position = new Vector3(1, 0, 0);
-            FindObjectOfType<PortalController>().Teleport(player, other.GetComponent<PortalPosition>());
+            //FindObjectOfType<SoundManager>().PlaySingle(other.GetComponent<AudioClip>());
+            
         }
     }
 
     void OnTriggerStay2D(Collider2D other) { 
         if (other.tag == "Finish" && inputKey == true) {
             Debug.Log("Finish");
-            if (Inventory.instance.inventoryContains(2003))
+            if (Inventory.instance.inventoryContains(2009))
                 GameManager.EndGame();
             else {
                 //DialogueTrigger_Warning.instance.TriggerDialogue();
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
             }
-        }
-       
-        else if (other.tag == "Portal") {
-            Debug.Log(other.name);
-            FindObjectOfType<SpriteController>().ChangeSprite(other);
-            FindObjectOfType<PortalController>().Teleport(player, other.GetComponent<PortalPosition>());
-            
         }
 
         else if (other.tag == "Box1" && inputKey == true) {
@@ -127,6 +117,11 @@ public class PlayerController : MonoBehaviour {
 
             Inventory.instance.AddItem(1002);
             Destroy(other);
+        }
+
+        else if (other.tag == "NPC" && inputKey == true) {
+            Debug.Log("NPC");
+            FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
         }
     }
 }
