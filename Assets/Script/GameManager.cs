@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     public MapManager mapScript;
 
-    public static int stageLevel = 1;       
+    public static int stageLevel =2;       
 
     void Awake() {
         if (instance == null)
