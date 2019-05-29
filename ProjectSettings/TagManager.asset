@@ -17,15 +17,10 @@ TagManager:
   - Box1
   - Box2
   - Window_1
-
   - Portal
-  - Door1_1
-  - Door1_2
-  - Door2_1
-  - Door2_2
   - FirePlace
   - Window_2
-
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -68,6 +63,9 @@ TagManager:
     locked: 0
   - name: Item
     uniqueID: 3542390179
+    locked: 0
+  - name: NPC
+    uniqueID: 4274798343
     locked: 0
   - name: Player
     uniqueID: 2819049019
