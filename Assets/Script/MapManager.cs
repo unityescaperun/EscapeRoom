@@ -148,7 +148,7 @@ public class MapManager : MonoBehaviour {
 
         else if (GameManager.stageLevel == 3) {
             Instantiate(Door1_1, new Vector3(12, 0, 0f), Quaternion.identity);
-            Instantiate(Stair_Up, new Vector3(0.143f, 0.4f, 0f), Quaternion.identity);
+            Instantiate(Stair_Up, new Vector3(0.1f, 0.33f, 0f), Quaternion.identity);
             Instantiate(Stair_Down, new Vector3(12, 6, 0f), Quaternion.identity);
             Instantiate(Door1_2, new Vector3(16, 0, 0f), Quaternion.identity);
             Instantiate(Door2_1, new Vector3(28, 0, 0f), Quaternion.identity);
