@@ -43,5 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8c25c93f9dc3f3439fb07ae0963e882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextDoor1: {fileID: 21300006, guid: ca51b331a5ae83345a1189f8318dd609, type: 3}
-  NextDoor2: {fileID: 21300004, guid: ca51b331a5ae83345a1189f8318dd609, type: 3}
+  NextDoor1: {fileID: 21300010, guid: ca51b331a5ae83345a1189f8318dd609, type: 3}
+  NextDoor2: {fileID: 21300008, guid: ca51b331a5ae83345a1189f8318dd609, type: 3}
