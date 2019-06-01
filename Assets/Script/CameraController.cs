@@ -20,9 +20,20 @@ public class CameraController : MonoBehaviour {
     // 스테이지1 : y축 고정
     // 스테이지2 ~ : y축 고정 해제
     void FixedUpdate() {
-        float posX = Mathf.SmoothDamp(transform.position.x, player.transform.position.x, ref velocity.x, smoothTimeX);
-        float posY = 3f;
+        float posX;
+        float posY;
+        if (GameManager.stageLevel == 1 || GameManager.stageLevel == 2) {
+            posX = Mathf.SmoothDamp(transform.position.x, player.transform.position.x, ref velocity.x, smoothTimeX);
+            posY = 3f;
 
-        transform.position = new Vector3(posX, posY, transform.position.z);
+            transform.position = new Vector3(posX, posY, transform.position.z);
+        }
+
+        else if(GameManager.stageLevel == 3) {
+            posX = Mathf.SmoothDamp(transform.position.x, player.transform.position.x, ref velocity.x, smoothTimeX);
+            posY = Mathf.SmoothDamp(transform.position.y, player.transform.position.y, ref velocity.y, smoothTimeY) + 2f;
+
+            transform.position = new Vector3(posX, posY, transform.position.z);
+        }
     }
 }
