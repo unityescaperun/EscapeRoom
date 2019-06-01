@@ -36,7 +36,12 @@ public class MapManager : MonoBehaviour {
     public GameObject Door2_1;
     public GameObject Door2_2;
     public GameObject NPC;
-    
+
+    // 스테이지 3 사용
+    public GameObject Stair_Up;
+    public GameObject Stair_Down;
+    public GameObject Game_End_Door;
+
 
     private Transform boardHolder;
     private List<Vector3> gridPosition = new List<Vector3>();
@@ -139,6 +144,16 @@ public class MapManager : MonoBehaviour {
             Instantiate(Door2_1, new Vector3(28, 0, 0f), Quaternion.identity);
             Instantiate(Door2_2, new Vector3(32, 0, 0f), Quaternion.identity);
             Instantiate(NPC, new Vector3(23, 0, 0f), Quaternion.identity);
-        }  
+        }
+
+        else if (GameManager.stageLevel == 3) {
+            Instantiate(Door1_1, new Vector3(12, 0, 0f), Quaternion.identity);
+            Instantiate(Stair_Up, new Vector3(0.143f, 0.4f, 0f), Quaternion.identity);
+            Instantiate(Stair_Down, new Vector3(12, 6, 0f), Quaternion.identity);
+            Instantiate(Door1_2, new Vector3(16, 0, 0f), Quaternion.identity);
+            Instantiate(Door2_1, new Vector3(28, 0, 0f), Quaternion.identity);
+            Instantiate(Door2_2, new Vector3(16, 6, 0f), Quaternion.identity);
+            Instantiate(Game_End_Door, new Vector3(5.8f, 1, 0f), Quaternion.identity);
+        }
     }
 }
