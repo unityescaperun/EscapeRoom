@@ -36,12 +36,22 @@ public class MapManager : MonoBehaviour {
     public GameObject Door2_1;
     public GameObject Door2_2;
     public GameObject NPC;
+    public GameObject Board;
+    public GameObject Sink;
+    public GameObject GasRange;
+    public GameObject Garbage_Wall;
+    public GameObject Restaurant_Window_Middle;
+    public GameObject Restaurant_Window_Bottom;
+    public GameObject Restaurant_Window_Left1;
+    public GameObject Restaurant_Window_Right1;
+    public GameObject Restaurant_Window_Left2;
+    public GameObject Restaurant_Window_Right2;
+    
 
     // 스테이지 3 사용
     public GameObject Stair_Up;
     public GameObject Stair_Down;
     public GameObject Game_End_Door;
-
 
     private Transform boardHolder;
     private List<Vector3> gridPosition = new List<Vector3>();
@@ -80,16 +90,40 @@ public class MapManager : MonoBehaviour {
             Debug.Log("월드2");
             for (int x = -1; x < rows2 + 1; x++) {
                 for(int y = -1; y < columns2 + 1; y++) {
-                    GameObject toInsatantiate = wall;
+                    GameObject toInstantiate = wall;
+                    if (x > 31 && x < rows2)
+                        toInstantiate = Garbage_Wall;
+                    else if (x == 16)
+                    {
+                        if (y > 0 && y < columns2)
+                            toInstantiate = Restaurant_Window_Left1;
+                        else if (y == 0)
+                            toInstantiate = Restaurant_Window_Left2;
+                    }
+                    else if (x == 28)
+                    {
+                        if (y > 0 && y < columns2)
+                            toInstantiate = Restaurant_Window_Right1;
+                        else if (y == 0)
+                            toInstantiate = Restaurant_Window_Right2;
+                    }
+                    else if (x > 16 && x < 28)
+                    {
+                        if (y > 0 && y < columns2)
+                            toInstantiate = Restaurant_Window_Middle;
+                        else if (y == 0)
+                            toInstantiate = Restaurant_Window_Bottom;
+                    }
+
                     if(x == -1 || x == 13 || x == 15 || x == 29 || x == 31 || x == rows2)
-                        toInsatantiate = outerWall;
+                        toInstantiate = outerWall;
                     else if(x == 14 || x == 30)
                         continue;
                     else
                         if(y == -1 || y == columns2)
-                            toInsatantiate = outerWall;
+                            toInstantiate = outerWall;
 
-                    GameObject instance = Instantiate(toInsatantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
+                    GameObject instance = Instantiate(toInstantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
 
                     instance.transform.SetParent(boardHolder);
                 }
@@ -143,7 +177,12 @@ public class MapManager : MonoBehaviour {
             Instantiate(Door1_2, new Vector3(16, 0, 0f), Quaternion.identity);
             Instantiate(Door2_1, new Vector3(28, 0, 0f), Quaternion.identity);
             Instantiate(Door2_2, new Vector3(32, 0, 0f), Quaternion.identity);
+
             Instantiate(NPC, new Vector3(23, 0, 0f), Quaternion.identity);
+
+            Instantiate(Sink, new Vector3(5, 0.3f, 0f), Quaternion.identity);
+            Instantiate(Board, new Vector3(6, 0.3f, 0f), Quaternion.identity);
+            Instantiate(GasRange, new Vector3(7, 0.3f, 0f), Quaternion.identity);
         }
 
         else if (GameManager.stageLevel == 3) {
