@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour {
             inputKey = true;
             Debug.Log("KeyDownK");
         }
-        else if (Input.GetKeyUp(KeyCode.W)){
+        else if (Input.GetKeyUp(KeyCode.W)) {
             inputKey = false;
         }
     }
@@ -61,11 +61,11 @@ public class PlayerController : MonoBehaviour {
             FindObjectOfType<SpriteController>().ChangeSprite(other);
             FindObjectOfType<PortalController>().Teleport(player, other.GetComponent<PortalPosition>());
             //FindObjectOfType<SoundManager>().PlaySingle(other.GetComponent<AudioClip>());
-            
+
         }
     }
 
-    void OnTriggerStay2D(Collider2D other) { 
+    void OnTriggerStay2D(Collider2D other) {
         if (other.tag == "Finish" && inputKey == true) {
             Debug.Log("Finish");
             if (Inventory.instance.inventoryContains(2009))
@@ -107,7 +107,7 @@ public class PlayerController : MonoBehaviour {
 
             if (!Inventory.instance.inventoryContains(2009))
                 Inventory.instance.AddItem(2009);
-            
+
         }
 
         else if (other.tag == "Box2" && inputKey == true) {
@@ -123,9 +123,12 @@ public class PlayerController : MonoBehaviour {
             Debug.Log("NPC");
             FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
         }
+
+
     }
 }
 
-    
+
+
 
 

@@ -21,6 +21,7 @@ TagManager:
   - FirePlace
   - Window_2
   - NPC
+  - GameEnd
   layers:
   - Default
   - TransparentFX
