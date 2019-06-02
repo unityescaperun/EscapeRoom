@@ -79,3 +79,28 @@ MonoBehaviour:
   Door2_1: {fileID: 1829200903810053445, guid: a27325d6630741e47b306b3538dc73dc, type: 3}
   Door2_2: {fileID: 1829200903810053445, guid: 3daf05ae0e756ad4eaa8bc391a2fd4c9, type: 3}
   NPC: {fileID: 265091938117104149, guid: 8dc0b4726c6e1374fbedf5006f708bb2, type: 3}
+  Board: {fileID: 5781086238193416090, guid: 82d01a4f2a42027448bef08fb27425ee, type: 3}
+  Sink: {fileID: 7300267034425516172, guid: ed77ab8f34756cc43b04f5d5916fd2a6, type: 3}
+  GasRange: {fileID: 6171018369999676805, guid: 5f7ddfe51262bd343959c017f52546f8,
+    type: 3}
+  Garbage_Wall: {fileID: 5639897808268184236, guid: 0c0c47d91f2cd2d49b157ecb96c1dc0f,
+    type: 3}
+  Restaurant_Window_Middle: {fileID: 5639897808268184236, guid: ba1e98eecd8585b42b0bb41fbc639295,
+    type: 3}
+  Restaurant_Window_Bottom: {fileID: 5639897808268184236, guid: 85d715d3aeb35974caa461af4e36a5ee,
+    type: 3}
+  Restaurant_Window_Left1: {fileID: 5639897808268184236, guid: c3c604b4c3972a542a2bf1788c09d301,
+    type: 3}
+  Restaurant_Window_Right1: {fileID: 5639897808268184236, guid: 9613d6200e3dd6243906f29f52697eaa,
+    type: 3}
+  Restaurant_Window_Left2: {fileID: 5639897808268184236, guid: 56ee9d18e7059da4f8f498a95d76e7c3,
+    type: 3}
+  Restaurant_Window_Right2: {fileID: 5639897808268184236, guid: d0a2175b201e2eb49ba121af1d862bc4,
+    type: 3}
+  Stair_Up: {fileID: 8274281181985680433, guid: 4acce108eb9ca9f4f942a42b84d26c47,
+    type: 3}
+  Stair_Down: {fileID: 6228410940957190108, guid: d49dd993d1bc08b4883423c3849ec473,
+    type: 3}
+  Game_End_Door: {fileID: 7739924715466532126, guid: 950f30eecc102074aabcdd736552bc0d,
+    type: 3}
+  Door3_1: {fileID: 892947530195131242, guid: bbe91a3f89864e6499249d3c6b09d480, type: 3}

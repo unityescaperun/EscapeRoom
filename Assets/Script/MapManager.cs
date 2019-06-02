@@ -52,6 +52,7 @@ public class MapManager : MonoBehaviour {
     public GameObject Stair_Up;
     public GameObject Stair_Down;
     public GameObject Game_End_Door;
+    public GameObject Door3_1;
 
     private Transform boardHolder;
     private List<Vector3> gridPosition = new List<Vector3>();
@@ -190,7 +191,7 @@ public class MapManager : MonoBehaviour {
             Instantiate(Stair_Up, new Vector3(0.1f, 0.33f, 0f), Quaternion.identity);
             Instantiate(Stair_Down, new Vector3(12, 6, 0f), Quaternion.identity);
             Instantiate(Door1_2, new Vector3(16, 0, 0f), Quaternion.identity);
-            Instantiate(Door2_1, new Vector3(28, 0, 0f), Quaternion.identity);
+            Instantiate(Door3_1, new Vector3(28, 0, 0f), Quaternion.identity);
             Instantiate(Door2_2, new Vector3(16, 6, 0f), Quaternion.identity);
             Instantiate(Game_End_Door, new Vector3(5.8f, 1, 0f), Quaternion.identity);
         }
