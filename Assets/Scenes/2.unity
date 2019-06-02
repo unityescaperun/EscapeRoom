@@ -440,6 +440,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Board
+      value: 
+      objectReference: {fileID: 5781086238193416090, guid: 82d01a4f2a42027448bef08fb27425ee,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Sink
+      value: 
+      objectReference: {fileID: 7300267034425516172, guid: ed77ab8f34756cc43b04f5d5916fd2a6,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: GasRange
+      value: 
+      objectReference: {fileID: 6171018369999676805, guid: 5f7ddfe51262bd343959c017f52546f8,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Garbage_Wall
+      value: 
+      objectReference: {fileID: 5639897808268184236, guid: 0c0c47d91f2cd2d49b157ecb96c1dc0f,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Restaurant_Window_Middle
+      value: 
+      objectReference: {fileID: 5639897808268184236, guid: ba1e98eecd8585b42b0bb41fbc639295,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Restaurant_Window_Bottom
+      value: 
+      objectReference: {fileID: 5639897808268184236, guid: 85d715d3aeb35974caa461af4e36a5ee,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Restaurant_Window_Left1
+      value: 
+      objectReference: {fileID: 5639897808268184236, guid: c3c604b4c3972a542a2bf1788c09d301,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Restaurant_Window_Right1
+      value: 
+      objectReference: {fileID: 5639897808268184236, guid: 9613d6200e3dd6243906f29f52697eaa,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Restaurant_Window_Left2
+      value: 
+      objectReference: {fileID: 5639897808268184236, guid: 56ee9d18e7059da4f8f498a95d76e7c3,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Restaurant_Window_Right2
+      value: 
+      objectReference: {fileID: 5639897808268184236, guid: d0a2175b201e2eb49ba121af1d862bc4,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c1dde809e361c4bb166750be9c8894, type: 3}
 --- !u!95 &1068385927 stripped
