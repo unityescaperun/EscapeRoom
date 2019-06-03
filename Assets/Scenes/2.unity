@@ -491,6 +491,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9025970854108089930, guid: d039a9f62f9576d46b1a7024f062540f,
         type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Door1_1
+      value: 
+      objectReference: {fileID: 1829200903810053445, guid: 093eef662cd482b47b2b75b95e2dada5,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Door1_2
+      value: 
+      objectReference: {fileID: 1829200903810053445, guid: a20d8a89b3e2a2f45ac0ec4ac02bf6ba,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Door2_1
+      value: 
+      objectReference: {fileID: 1829200903810053445, guid: 0ef3022ddd43439469a2d5edad227bc5,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Door2_2
+      value: 
+      objectReference: {fileID: 1829200903810053445, guid: 05513c5ee2a1c544b9bcfd07254d21a8,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: outerWall
+      value: 
+      objectReference: {fileID: 9025970854108089930, guid: d039a9f62f9576d46b1a7024f062540f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c1dde809e361c4bb166750be9c8894, type: 3}
 --- !u!95 &1068385927 stripped
