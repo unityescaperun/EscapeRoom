@@ -49,6 +49,9 @@ public class MapManager : MonoBehaviour {
     public GameObject Restaurant_Window_Right1;
     public GameObject Restaurant_Window_Left2;
     public GameObject Restaurant_Window_Right2;
+    public GameObject Chair1;
+    public GameObject Chair2;
+    public GameObject Table;
     
 
     private Transform boardHolder;
@@ -169,6 +172,15 @@ public class MapManager : MonoBehaviour {
             Instantiate(Shelf1, new Vector3(9, 0.3f, 0f), Quaternion.identity);
             Instantiate(Shelf1, new Vector3(10, 0.3f, 0f), Quaternion.identity);
             Instantiate(Shelf2, new Vector3(11, 0.3f, 0f), Quaternion.identity);
+
+            Instantiate(Chair1, new Vector3(17, -0.05f, 0f), Quaternion.identity);
+            Instantiate(Table, new Vector3(19, -0.15f, 0f), Quaternion.identity);
+            Instantiate(Chair2, new Vector3(21, -0.05f, 0f), Quaternion.identity);
+
+            Instantiate(Chair1, new Vector3(23, -0.05f, 0f), Quaternion.identity);
+            Instantiate(Table, new Vector3(25, -0.15f, 0f), Quaternion.identity);
+            Instantiate(Chair2, new Vector3(27, -0.05f, 0f), Quaternion.identity);
+            
         }  
     }
 }
