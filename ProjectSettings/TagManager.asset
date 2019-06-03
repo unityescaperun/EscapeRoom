@@ -25,6 +25,7 @@ TagManager:
   - Food1
   - Cook
   - Material
+  - ShelfPoison
   layers:
   - Default
   - TransparentFX
@@ -64,6 +65,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 1973800001
+    locked: 0
+  - name: Furniture
+    uniqueID: 1712440821
     locked: 0
   - name: Item
     uniqueID: 3542390179

@@ -42,6 +42,7 @@ public class MapManager : MonoBehaviour {
     public GameObject Part3;
     public GameObject Shelf1;
     public GameObject Shelf2;
+    public GameObject ShelfPoison;
     public GameObject Garbage_Wall;
     public GameObject Restaurant_Window_Middle;
     public GameObject Restaurant_Window_Bottom;
@@ -161,7 +162,7 @@ public class MapManager : MonoBehaviour {
 
             Instantiate(NPC, new Vector3(23, 0, 0f), Quaternion.identity);
 
-            Instantiate(Shelf2, new Vector3(1, 0.3f, 0f), Quaternion.identity);
+            Instantiate(ShelfPoison, new Vector3(1, 0.3f, 0f), Quaternion.identity);
             Instantiate(Part2, new Vector3(2, 0.3f, 0f), Quaternion.identity);
             Instantiate(Part1, new Vector3(3, 0.3f, 0f), Quaternion.identity);
             Instantiate(Part2, new Vector3(4, 0.3f, 0f), Quaternion.identity);

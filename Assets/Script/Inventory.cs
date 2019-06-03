@@ -136,7 +136,7 @@ public class Inventory : MonoBehaviour {
 
     // 아이템 조합식 구현. 조합되는 모든 아이템들을 여기에서 구현해야 한다.
     bool CombineItem(Item item1, Item item2) {
-        if(item1.itemID == 1001 && item2.itemID == 1002 || item1.itemID == 1002 && item2.itemID == 1001) {
+        if(item1.itemID == 1001 && item2.itemID == 1002 || item1.itemID == 1002 && item2.itemID == 1001 || item1.itemID == 3004 && item2.itemID == 3005 || item1.itemID == 3005 && item2.itemID == 3004) {
             return true;
         }
         return false;

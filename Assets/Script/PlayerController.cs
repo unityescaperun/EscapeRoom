@@ -189,23 +189,32 @@ public class PlayerController : MonoBehaviour {
                 Debug.Log(other.GetComponent<Message>().dialogue.name);
                 if (Inventory.instance.inventoryContains(3005))
                     other.GetComponent<Message>().dialogue.sentences[0] = "이딴 음식을 먹으라고 가져오다니!";
-                else if (Inventory.instance.inventoryContains(3006))
+                else if (Inventory.instance.inventoryContains(6009))
                 {
                     other.GetComponent<Message>().dialogue.sentences[0] = "커억!";
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
-                    other.GetComponent<Message>().dialogue.sentences[0] = "품속에서 열쇠를 찾았다!";
-                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
 
-                    Inventory.instance.RemoveItem(3006);
+                    Inventory.instance.RemoveItem(6009);
                     Inventory.instance.AddItem(3007);
+                    Destroy(other);
                 }
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
                 if (Inventory.instance.inventoryContains(3005) == false && Inventory.instance.inventoryContains(3006) == false)
                 {
                     other.GetComponent<Message>().dialogue.sentences[0] = "어서 먹을 것을 가져오라고!";
                 }
-                
-                
+            }
+
+            else if(other.tag == "ShelfPoison" && inputKey == true)
+            {
+                Debug.Log("Get Item");
+
+                if(Inventory.instance.inventoryContains(3004) == false && Inventory.instance.inventoryContains(3005) == true)
+                {
+                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                    Inventory.instance.AddItem(3004);
+                    Destroy(other);
+                }
             }
         }
     }
