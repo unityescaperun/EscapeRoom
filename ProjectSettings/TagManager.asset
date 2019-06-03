@@ -21,6 +21,10 @@ TagManager:
   - FirePlace
   - Window_2
   - NPC
+  - Food
+  - Food1
+  - Cook
+  - Material
   layers:
   - Default
   - TransparentFX

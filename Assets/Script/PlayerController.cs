@@ -58,70 +58,165 @@ public class PlayerController : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Portal") {
             Debug.Log(other.name);
-            FindObjectOfType<SpriteController>().ChangeSprite(other);
             FindObjectOfType<PortalController>().Teleport(player, other.GetComponent<PortalPosition>());
             //FindObjectOfType<SoundManager>().PlaySingle(other.GetComponent<AudioClip>());
             
         }
     }
 
-    void OnTriggerStay2D(Collider2D other) { 
-        if (other.tag == "Finish" && inputKey == true) {
-            Debug.Log("Finish");
-            if (Inventory.instance.inventoryContains(2009))
-                GameManager.EndGame();
-            else {
-                //DialogueTrigger_Warning.instance.TriggerDialogue();
+    void OnTriggerStay2D(Collider2D other) {
+        if (GameManager.stageLevel == 1)
+        {
+            if (other.tag == "Finish" && inputKey == true)
+            {
+                Debug.Log("Finish");
+                if (Inventory.instance.inventoryContains(2009))
+                    GameManager.EndGame();
+                else
+                {
+                    //DialogueTrigger_Warning.instance.TriggerDialogue();
+                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                }
+            }
+
+            else if (other.tag == "Box1" && inputKey == true)
+            {
+                Debug.Log(other.GetComponent<Message>().dialogue.name);
+                FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+
+                Inventory.instance.AddItem(1001);
+                Destroy(other);
+            }
+
+            else if (other.tag == "FirePlace" && inputKey == true)
+            {
+                Debug.Log(other.GetComponent<Message>().dialogue.name);
+                FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+
+                if (Inventory.instance.inventoryContains(2003) && !Inventory.instance.inventoryContains(2007))
+                    Inventory.instance.AddItem(2007);
+
+                solveProblem = true;
+            }
+
+            else if (other.tag == "Window_1" && inputKey == true && solveProblem == true && Inventory.instance.inventoryContains(2007))
+            {
+                Debug.Log(other.GetComponent<Message>().dialogue.name);
+                FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+
+                solveProblem = false;
+            }
+
+            else if (other.tag == "Window_2" && inputKey == true && solveProblem == true && Inventory.instance.inventoryContains(2007))
+            {
+                Debug.Log(other.GetComponent<Message>().dialogue.name);
+                FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+
+                if (!Inventory.instance.inventoryContains(2009))
+                    Inventory.instance.AddItem(2009);
+
+            }
+
+            else if (other.tag == "Box2" && inputKey == true)
+            {
+                Debug.Log("Box2");
+                FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                //DialogueTrigger.instance.TriggerDialogue();
+
+                Inventory.instance.AddItem(1002);
+                Destroy(other);
+            }
+
+            else if (other.tag == "NPC" && inputKey == true)
+            {
+                Debug.Log("NPC");
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
             }
         }
+        else if(GameManager.stageLevel == 2)
+        {
+            if (other.tag == "Finish" && inputKey == true)
+            {
+                Debug.Log("Finish");
+                if (Inventory.instance.inventoryContains(3007))
+                    GameManager.EndGame();
+                else
+                {
+                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                }
+            }
 
-        else if (other.tag == "Box1" && inputKey == true) {
-            Debug.Log(other.GetComponent<Message>().dialogue.name);
-            FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+            else if (other.tag == "Cook" && inputKey == true)
+            {
+                if (Inventory.instance.inventoryContains(3001) && Inventory.instance.inventoryContains(3002) && Inventory.instance.inventoryContains(3003))
+                {
+                    other.GetComponent<Message>().dialogue.sentences[0] = "요리가 완성되었다!";
+                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                    Inventory.instance.AddItem(3005);
+                    Destroy(other);
+                }
+                else
+                {
+                    Debug.Log(other.GetComponent<Message>().dialogue.name);
+                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                }
+            }
 
-            Inventory.instance.AddItem(1001);
-            Destroy(other);
-        }
+            else if (other.tag == "Material" && inputKey == true)
+            {
+                if (!Inventory.instance.inventoryContains(3001))
+                {
+                    Debug.Log("Get Item");
+                    Inventory.instance.AddItem(3001);
+                    Destroy(other);
+                }
+                else if(Inventory.instance.inventoryContains(3001) && (Inventory.instance.inventoryContains(3002) == false))
+                {
+                    Debug.Log("Get Item");
+                    Inventory.instance.AddItem(3002);
+                    Destroy(other);
+                }
+                else if(Inventory.instance.inventoryContains(3001) && Inventory.instance.inventoryContains(3002))
+                {
+                    Debug.Log("Get Item");
+                    Inventory.instance.AddItem(3003);
+                    Destroy(other);
+                }
+            }
 
-        else if (other.tag == "FirePlace" && inputKey == true) {
-            Debug.Log(other.GetComponent<Message>().dialogue.name);
-            FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+            else if (other.tag == "Window_1" && inputKey == true && solveProblem == true && Inventory.instance.inventoryContains(2007))
+            {
+                Debug.Log(other.GetComponent<Message>().dialogue.name);
+                FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
 
-            if (Inventory.instance.inventoryContains(2003) && !Inventory.instance.inventoryContains(2007))
-                Inventory.instance.AddItem(2007);
+                solveProblem = false;
+            }
 
-            solveProblem = true;
-        }
+            else if (other.tag == "Window_2" && inputKey == true && solveProblem == true && Inventory.instance.inventoryContains(2007))
+            {
+                Debug.Log(other.GetComponent<Message>().dialogue.name);
+                FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
 
-        else if (other.tag == "Window_1" && inputKey == true && solveProblem == true && Inventory.instance.inventoryContains(2007)) {
-            Debug.Log(other.GetComponent<Message>().dialogue.name);
-            FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                if (!Inventory.instance.inventoryContains(2009))
+                    Inventory.instance.AddItem(2009);
 
-            solveProblem = false;
-        }
+            }
 
-        else if (other.tag == "Window_2" && inputKey == true && solveProblem == true && Inventory.instance.inventoryContains(2007)) {
-            Debug.Log(other.GetComponent<Message>().dialogue.name);
-            FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+            else if (other.tag == "Box2" && inputKey == true)
+            {
+                Debug.Log("Box2");
+                FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                //DialogueTrigger.instance.TriggerDialogue();
 
-            if (!Inventory.instance.inventoryContains(2009))
-                Inventory.instance.AddItem(2009);
-            
-        }
+                Inventory.instance.AddItem(1002);
+                Destroy(other);
+            }
 
-        else if (other.tag == "Box2" && inputKey == true) {
-            Debug.Log("Box2");
-            FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
-            //DialogueTrigger.instance.TriggerDialogue();
-
-            Inventory.instance.AddItem(1002);
-            Destroy(other);
-        }
-
-        else if (other.tag == "NPC" && inputKey == true) {
-            Debug.Log("NPC");
-            FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+            else if (other.tag == "NPC" && inputKey == true)
+            {
+                Debug.Log("NPC");
+                FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+            }
         }
     }
 }
