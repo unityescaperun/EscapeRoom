@@ -146,9 +146,9 @@ public class PlayerController : MonoBehaviour {
                 {
                     other.GetComponent<Message>().dialogue.sentences[0] = "요리가 완성되었다!";
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
-                    //Inventory.instance.RemoveItem(3001);
-                    //Inventory.instance.RemoveItem(3002);
-                    //Inventory.instance.RemoveItem(3003);
+                    Inventory.instance.RemoveItem(3001);
+                    Inventory.instance.RemoveItem(3002);
+                    Inventory.instance.RemoveItem(3003);
                     Inventory.instance.AddItem(3005);
                     Destroy(other);
                 }
@@ -196,7 +196,7 @@ public class PlayerController : MonoBehaviour {
                     other.GetComponent<Message>().dialogue.sentences[0] = "품속에서 열쇠를 찾았다!";
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
 
-                    //Inventory.instance.RemoveItem(3006);
+                    Inventory.instance.RemoveItem(3006);
                     Inventory.instance.AddItem(3007);
                 }
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
