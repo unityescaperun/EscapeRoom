@@ -479,6 +479,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7349674546999565751, guid: 2824264f19aeb4840b815a8366040896,
         type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: ShelfPoison
+      value: 
+      objectReference: {fileID: 7300267034425516172, guid: 33c7a720b3ded2f4cbf1ad0a0fe2ebc8,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: wall
+      value: 
+      objectReference: {fileID: 9025970854108089930, guid: d039a9f62f9576d46b1a7024f062540f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c1dde809e361c4bb166750be9c8894, type: 3}
 --- !u!95 &1068385927 stripped
