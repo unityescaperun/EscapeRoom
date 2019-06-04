@@ -205,6 +205,108 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &351211584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6907307100633831618, guid: c1c1dde809e361c4bb166750be9c8894,
+    type: 3}
+  m_PrefabInstance: {fileID: 389569203}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &351211588
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351211584}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7b2129955f7aebc469ae85ff862b0522, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &389569203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -312,7 +414,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Chair1
       value: 
-      objectReference: {fileID: 2632797903213657304, guid: 9f2f47bbe5963004fab9303372bd1d20,
+      objectReference: {fileID: 2632797903213657304, guid: 664357c1e7fe75a4492340c0c62996ae,
         type: 3}
     - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
         type: 3}
@@ -324,7 +426,43 @@ PrefabInstance:
         type: 3}
       propertyPath: Chair2
       value: 
-      objectReference: {fileID: 2632797903213657304, guid: 664357c1e7fe75a4492340c0c62996ae,
+      objectReference: {fileID: 2632797903213657304, guid: 9f2f47bbe5963004fab9303372bd1d20,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: outerWall
+      value: 
+      objectReference: {fileID: 495116611442854676, guid: 00428258547d8364daa56934d79577de,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: wall
+      value: 
+      objectReference: {fileID: 9025970854108089930, guid: d039a9f62f9576d46b1a7024f062540f,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Door1_1
+      value: 
+      objectReference: {fileID: 1829200903810053445, guid: 093eef662cd482b47b2b75b95e2dada5,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Door1_2
+      value: 
+      objectReference: {fileID: 1829200903810053445, guid: a20d8a89b3e2a2f45ac0ec4ac02bf6ba,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Door2_1
+      value: 
+      objectReference: {fileID: 1829200903810053445, guid: 0ef3022ddd43439469a2d5edad227bc5,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Door2_2
+      value: 
+      objectReference: {fileID: 1829200903810053445, guid: 05513c5ee2a1c544b9bcfd07254d21a8,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c1dde809e361c4bb166750be9c8894, type: 3}

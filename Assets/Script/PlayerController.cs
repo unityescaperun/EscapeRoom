@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour {
             Debug.Log(other.name);
             FindObjectOfType<PortalController>().Teleport(player, other.GetComponent<PortalPosition>());
             //FindObjectOfType<SoundManager>().PlaySingle(other.GetComponent<AudioClip>());
-            
+            other.GetComponent<AudioSource>().Play();
         }
     }
 
@@ -145,8 +145,8 @@ public class PlayerController : MonoBehaviour {
             else if (other.tag == "Cook" && inputKey == true)
             {
                 if (Inventory.instance.inventoryContains(3001) && Inventory.instance.inventoryContains(3002) && Inventory.instance.inventoryContains(3003))
-                if (Inventory.instance.inventoryContains(3001) && Inventory.instance.inventoryContains(3002) && Inventory.instance.inventoryContains(3003))
                 {
+                    other.GetComponent<AudioSource>().Play();
                     other.GetComponent<Message>().dialogue.sentences[0] = "요리가 완성되었다!";
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
                     Inventory.instance.RemoveItem(3001);
@@ -167,6 +167,7 @@ public class PlayerController : MonoBehaviour {
                 if (Inventory.instance.inventoryContains(3001) == false && Inventory.instance.inventoryContains(3005) == false && Inventory.instance.inventoryContains(3006) == false && Inventory.instance.inventoryContains(3007) == false)
                 {
                     Debug.Log("Get Item");
+                    other.GetComponent<AudioSource>().Play();
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
                     Inventory.instance.AddItem(3001);
                     Destroy(other);
@@ -174,6 +175,7 @@ public class PlayerController : MonoBehaviour {
                 else if(Inventory.instance.inventoryContains(3001) && (Inventory.instance.inventoryContains(3002) == false))
                 {
                     Debug.Log("Get Item");
+                    other.GetComponent<AudioSource>().Play();
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
                     Inventory.instance.AddItem(3002);
                     Destroy(other);
@@ -181,6 +183,7 @@ public class PlayerController : MonoBehaviour {
                 else if(Inventory.instance.inventoryContains(3001) && Inventory.instance.inventoryContains(3002) && Inventory.instance.inventoryContains(3003) == false)
                 {
                     Debug.Log("Get Item");
+                    other.GetComponent<AudioSource>().Play();
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
                     Inventory.instance.AddItem(3003);
                     Destroy(other);
@@ -214,6 +217,7 @@ public class PlayerController : MonoBehaviour {
 
                 if(Inventory.instance.inventoryContains(3004) == false && Inventory.instance.inventoryContains(3005) == true)
                 {
+                    other.GetComponent<AudioSource>().Play();
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
                     Inventory.instance.AddItem(3004);
                     Destroy(other);
