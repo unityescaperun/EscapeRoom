@@ -203,36 +203,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
-        type: 3}
-      propertyPath: Box1
-      value: 
-      objectReference: {fileID: 4682704996079907160, guid: 3db24148a0a0b144fa34477de12494ca,
-        type: 3}
-    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
-        type: 3}
-      propertyPath: Box2
-      value: 
-      objectReference: {fileID: 1887154696087404104, guid: 268e3f5f269ee18498f9d4cd03771603,
-        type: 3}
-    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
-        type: 3}
-      propertyPath: Stair_Up
-      value: 
-      objectReference: {fileID: 8274281181985680433, guid: 4acce108eb9ca9f4f942a42b84d26c47,
-        type: 3}
-    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
-        type: 3}
-      propertyPath: Stair_Down
-      value: 
-      objectReference: {fileID: 6228410940957190108, guid: d49dd993d1bc08b4883423c3849ec473,
-        type: 3}
-    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
-        type: 3}
-      propertyPath: Game_End_Door
-      value: 
-      objectReference: {fileID: 7739924715466532126, guid: 950f30eecc102074aabcdd736552bc0d,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c1dde809e361c4bb166750be9c8894, type: 3}
 --- !u!1 &519420028
