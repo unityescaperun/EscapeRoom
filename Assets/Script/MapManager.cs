@@ -55,6 +55,11 @@ public class MapManager : MonoBehaviour {
     public GameObject Table;
     
 
+    public GameObject Stair_Up;
+    public GameObject Stair_Down;
+    public GameObject Game_End_Door;
+    public GameObject Door3_1;
+
     private Transform boardHolder;
     private List<Vector3> gridPosition = new List<Vector3>();
 
@@ -169,6 +174,7 @@ public class MapManager : MonoBehaviour {
             Instantiate(Sink, new Vector3(5, 0.3f, 0f), Quaternion.identity);
             Instantiate(Board, new Vector3(6, 0.3f, 0f), Quaternion.identity);
             Instantiate(GasRange, new Vector3(7, 0.3f, 0f), Quaternion.identity);
+
             Instantiate(Part3, new Vector3(8, 0.15f, 0f), Quaternion.identity);
             Instantiate(Shelf1, new Vector3(9, 0.3f, 0f), Quaternion.identity);
             Instantiate(Shelf1, new Vector3(10, 0.3f, 0f), Quaternion.identity);
@@ -183,6 +189,16 @@ public class MapManager : MonoBehaviour {
             Instantiate(Chair2, new Vector3(27, -0.05f, 0f), Quaternion.identity);
             
             Instantiate(exit, new Vector3(rows2 - 1, 0, 0f), Quaternion.identity);
-        }  
+        }
+        else if (GameManager.stageLevel == 3) {
+            Instantiate(Door1_1, new Vector3(12, 0, 0f), Quaternion.identity);
+            Instantiate(Stair_Up, new Vector3(0.1f, 0.33f, 0f), Quaternion.identity);
+            Instantiate(Stair_Down, new Vector3(12, 6, 0f), Quaternion.identity);
+            Instantiate(Door1_2, new Vector3(16, 0, 0f), Quaternion.identity);
+            Instantiate(Door3_1, new Vector3(28, 0, 0f), Quaternion.identity);
+            Instantiate(Door2_2, new Vector3(16, 6, 0f), Quaternion.identity);
+            Instantiate(Game_End_Door, new Vector3(5.8f, 1, 0f), Quaternion.identity);
+        }
+
     }
 }
