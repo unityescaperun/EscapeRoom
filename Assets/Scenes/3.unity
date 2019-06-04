@@ -257,6 +257,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5339779292286541082, guid: a69bc50c70d96d94ebb967c1c3d7fae0,
         type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Windows
+      value: 
+      objectReference: {fileID: 7364050878642487794, guid: add5cff6e40f6ae40912cc7910f80ffd,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Picture3_1
+      value: 
+      objectReference: {fileID: 3308876027425831612, guid: 7a742a5b59ef3e747b8a27ea7ebd6b2e,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Picture3_2
+      value: 
+      objectReference: {fileID: 3835992695910178709, guid: ca9c1310091709844a746fe004de484c,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c1dde809e361c4bb166750be9c8894, type: 3}
 --- !u!1 &519420028
