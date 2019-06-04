@@ -66,8 +66,13 @@ public class MapManager : MonoBehaviour {
     public GameObject Table_Stage3;
     public GameObject Bookshelf;
     public GameObject Clock;
+    public GameObject Windows;
     public GameObject Window3_1;
     public GameObject Window3_2;
+    public GameObject Picture3_1;
+    public GameObject Picture3_2;
+
+
     private Transform boardHolder;
     private List<Vector3> gridPosition = new List<Vector3>();
 
@@ -223,17 +228,17 @@ public class MapManager : MonoBehaviour {
             Instantiate(Door3_1, new Vector3(28, 0, 0f), Quaternion.identity);
             Instantiate(Door2_2, new Vector3(16, 6, 0f), Quaternion.identity);
             Instantiate(Bookshelf, new Vector3(1.72f, 6.51f, 0f), Quaternion.identity);
-            Instantiate(Chain, new Vector3(18, 8.08f, 0f), Quaternion.identity);
-            Instantiate(Chain, new Vector3(19, 8.08f, 0f), Quaternion.identity);
-            Instantiate(Chain, new Vector3(20, 8.08f, 0f), Quaternion.identity);
-            Instantiate(Chain, new Vector3(21, 8.08f, 0f), Quaternion.identity);
-            Instantiate(Chain, new Vector3(22, 8.08f, 0f), Quaternion.identity);
             Instantiate(Chain, new Vector3(23, 8.08f, 0f), Quaternion.identity);
-            Instantiate(Chain, new Vector3(24, 8.08f, 0f), Quaternion.identity);
             Instantiate(Table_Stage3, new Vector3(20, -0.2f, 0f), Quaternion.identity);
-            Instantiate(Window3_1, new Vector3(8.6f, 1, 0f), Quaternion.identity);
-            Instantiate(Window3_2, new Vector3(3, 1, 0f), Quaternion.identity);
-            Instantiate(Clock, new Vector3(25, 0.4f, 0f), Quaternion.identity);
+            Instantiate(Windows, new Vector3(19, 1.5f, 0f), Quaternion.identity);
+            Instantiate(Windows, new Vector3(17, 1.5f, 0f), Quaternion.identity);
+            Instantiate(Windows, new Vector3(27, 1.5f, 0f), Quaternion.identity);
+            Instantiate(Windows, new Vector3(21, 1.5f, 0f), Quaternion.identity);
+            Instantiate(Window3_1, new Vector3(25, 1.5f, 0f), Quaternion.identity);
+            Instantiate(Window3_2, new Vector3(23, 1.5f, 0f), Quaternion.identity);
+            Instantiate(Picture3_1, new Vector3(8.4f, 1.5f, 0f), Quaternion.identity);
+            Instantiate(Picture3_2, new Vector3(3.3f, 1.5f, 0f), Quaternion.identity);
+            Instantiate(Clock, new Vector3(24, 0.4f, 0f), Quaternion.identity);
             Instantiate(TV, new Vector3(20, 0.48f, 0f), Quaternion.identity);
             Instantiate(Game_End_Door, new Vector3(5.8f, 1, 0f), Quaternion.identity);
         }
