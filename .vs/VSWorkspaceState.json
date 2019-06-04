@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Assets",
+    "\\Assets\\resources\\itemIcons",
     "\\Assets\\Script"
   ],
-  "SelectedNode": "\\Assets\\Script\\MapManager.cs",
+  "SelectedNode": "\\Assets\\Script\\PlayerController.cs",
   "PreviewInSolutionExplorer": false
 }

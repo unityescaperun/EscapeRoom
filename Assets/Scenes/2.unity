@@ -205,75 +205,6 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &241713228
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5052348192148664812, guid: 4e03cf6453fff364785e11c6fb1335bc,
-        type: 3}
-      propertyPath: m_Name
-      value: SpriteManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 5052348192148664815, guid: 4e03cf6453fff364785e11c6fb1335bc,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5052348192148664815, guid: 4e03cf6453fff364785e11c6fb1335bc,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5052348192148664815, guid: 4e03cf6453fff364785e11c6fb1335bc,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5052348192148664815, guid: 4e03cf6453fff364785e11c6fb1335bc,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5052348192148664815, guid: 4e03cf6453fff364785e11c6fb1335bc,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5052348192148664815, guid: 4e03cf6453fff364785e11c6fb1335bc,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5052348192148664815, guid: 4e03cf6453fff364785e11c6fb1335bc,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5052348192148664815, guid: 4e03cf6453fff364785e11c6fb1335bc,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5052348192148664815, guid: 4e03cf6453fff364785e11c6fb1335bc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5052348192148664815, guid: 4e03cf6453fff364785e11c6fb1335bc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5052348192148664815, guid: 4e03cf6453fff364785e11c6fb1335bc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4e03cf6453fff364785e11c6fb1335bc, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,7 +354,7 @@ PrefabInstance:
     - target: {fileID: 6907307100633831621, guid: c1c1dde809e361c4bb166750be9c8894,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6907307100633831621, guid: c1c1dde809e361c4bb166750be9c8894,
         type: 3}
@@ -502,6 +433,99 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
         type: 3}
+      propertyPath: Part1
+      value: 
+      objectReference: {fileID: 7300267034425516172, guid: 24826a8642ece7a4b84af2e09f37ec57,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Part2
+      value: 
+      objectReference: {fileID: 7300267034425516172, guid: 1cb0012c0162af849902d8bf1f648de5,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Part3
+      value: 
+      objectReference: {fileID: 7300267034425516172, guid: f0a2af757e462ee4d9b21adee49a8377,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Shelf1
+      value: 
+      objectReference: {fileID: 7300267034425516172, guid: 2a74dedc0fd93044195090c47ad0cd2d,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Shelf2
+      value: 
+      objectReference: {fileID: 7300267034425516172, guid: 153ac55af935cb041899bfaf9ef482ea,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Chair1
+      value: 
+      objectReference: {fileID: 2632797903213657304, guid: 664357c1e7fe75a4492340c0c62996ae,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Chair2
+      value: 
+      objectReference: {fileID: 2632797903213657304, guid: 9f2f47bbe5963004fab9303372bd1d20,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Table
+      value: 
+      objectReference: {fileID: 7349674546999565751, guid: 2824264f19aeb4840b815a8366040896,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: ShelfPoison
+      value: 
+      objectReference: {fileID: 7300267034425516172, guid: 33c7a720b3ded2f4cbf1ad0a0fe2ebc8,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: wall
+      value: 
+      objectReference: {fileID: 9025970854108089930, guid: d039a9f62f9576d46b1a7024f062540f,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Door1_1
+      value: 
+      objectReference: {fileID: 1829200903810053445, guid: 093eef662cd482b47b2b75b95e2dada5,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Door1_2
+      value: 
+      objectReference: {fileID: 1829200903810053445, guid: a20d8a89b3e2a2f45ac0ec4ac02bf6ba,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Door2_1
+      value: 
+      objectReference: {fileID: 1829200903810053445, guid: 0ef3022ddd43439469a2d5edad227bc5,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Door2_2
+      value: 
+      objectReference: {fileID: 1829200903810053445, guid: 05513c5ee2a1c544b9bcfd07254d21a8,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: outerWall
+      value: 
+      objectReference: {fileID: 495116611442854676, guid: 00428258547d8364daa56934d79577de,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: exit
+      value: 
+      objectReference: {fileID: 4193158352040778534, guid: b6585fcd1dd2e9d44aea018e97b17dd6,
       propertyPath: Stair_Down
       value: 
       objectReference: {fileID: 6228410940957190108, guid: d49dd993d1bc08b4883423c3849ec473,

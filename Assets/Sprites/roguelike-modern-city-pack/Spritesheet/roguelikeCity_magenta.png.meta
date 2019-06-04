@@ -8,6 +8,7 @@ TextureImporter:
     21300006: Restaurant_Window_Left2
     21300008: Restaurant_Window_Right2
     21300010: Restaurant_Window_Bottom
+    21300012: Stage2OuterWall
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -231,13 +232,33 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: b796fa1928e79a44d8bd67cca27aee0f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage2OuterWall
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 374
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801826705b00e754c8185d128399d454
       vertices: []
       indices: 
       edges: []

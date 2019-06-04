@@ -8,8 +8,6 @@ public class MapManager : MonoBehaviour {
     int rows = 20;
     int columns2 = 5;
     int rows2 = 45;
-    int columns3 = 11;
-    int rows3 = 29;
 
     bool DoorOpen = false;
 
@@ -39,6 +37,12 @@ public class MapManager : MonoBehaviour {
     public GameObject Board;
     public GameObject Sink;
     public GameObject GasRange;
+    public GameObject Part1;
+    public GameObject Part2;
+    public GameObject Part3;
+    public GameObject Shelf1;
+    public GameObject Shelf2;
+    public GameObject ShelfPoison;
     public GameObject Garbage_Wall;
     public GameObject Restaurant_Window_Middle;
     public GameObject Restaurant_Window_Bottom;
@@ -46,9 +50,11 @@ public class MapManager : MonoBehaviour {
     public GameObject Restaurant_Window_Right1;
     public GameObject Restaurant_Window_Left2;
     public GameObject Restaurant_Window_Right2;
+    public GameObject Chair1;
+    public GameObject Chair2;
+    public GameObject Table;
     
 
-    // 스테이지 3 사용
     public GameObject Stair_Up;
     public GameObject Stair_Down;
     public GameObject Game_End_Door;
@@ -130,26 +136,6 @@ public class MapManager : MonoBehaviour {
                 }
             }          
         }
-
-        // 스테이지 3
-        else if (GameManager.stageLevel == 3) {
-            Debug.Log("월드3");
-            for (int x = -1; x < rows3 + 1; x++) {
-                for (int y = -1; y < columns3 + 1; y++) {
-                    GameObject toInsatantiate = wall;
-                    if (x == -1 || x == 13 || x == 15 || x == rows3)
-                        toInsatantiate = outerWall;
-                    else if (x == 14 || x == 30 )
-                        continue;
-                    else if (y == -1 || y == 5 || y == columns3)
-                        toInsatantiate = outerWall;
-
-                    GameObject instance = Instantiate(toInsatantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
-
-                    instance.transform.SetParent(boardHolder);
-                }
-            }
-        }
     }
 
     public void SetupScene() {
@@ -181,11 +167,29 @@ public class MapManager : MonoBehaviour {
 
             Instantiate(NPC, new Vector3(23, 0, 0f), Quaternion.identity);
 
+            Instantiate(ShelfPoison, new Vector3(1, 0.3f, 0f), Quaternion.identity);
+            Instantiate(Part2, new Vector3(2, 0.3f, 0f), Quaternion.identity);
+            Instantiate(Part1, new Vector3(3, 0.3f, 0f), Quaternion.identity);
+            Instantiate(Part2, new Vector3(4, 0.3f, 0f), Quaternion.identity);
             Instantiate(Sink, new Vector3(5, 0.3f, 0f), Quaternion.identity);
             Instantiate(Board, new Vector3(6, 0.3f, 0f), Quaternion.identity);
             Instantiate(GasRange, new Vector3(7, 0.3f, 0f), Quaternion.identity);
-        }
 
+            Instantiate(Part3, new Vector3(8, 0.15f, 0f), Quaternion.identity);
+            Instantiate(Shelf1, new Vector3(9, 0.3f, 0f), Quaternion.identity);
+            Instantiate(Shelf1, new Vector3(10, 0.3f, 0f), Quaternion.identity);
+            Instantiate(Shelf2, new Vector3(11, 0.3f, 0f), Quaternion.identity);
+
+            Instantiate(Chair1, new Vector3(17, -0.05f, 0f), Quaternion.identity);
+            Instantiate(Table, new Vector3(19, -0.15f, 0f), Quaternion.identity);
+            Instantiate(Chair2, new Vector3(21, -0.05f, 0f), Quaternion.identity);
+
+            Instantiate(Chair1, new Vector3(23, -0.05f, 0f), Quaternion.identity);
+            Instantiate(Table, new Vector3(25, -0.15f, 0f), Quaternion.identity);
+            Instantiate(Chair2, new Vector3(27, -0.05f, 0f), Quaternion.identity);
+            
+            Instantiate(exit, new Vector3(rows2 - 1, 0, 0f), Quaternion.identity);
+        }
         else if (GameManager.stageLevel == 3) {
             Instantiate(Door1_1, new Vector3(12, 0, 0f), Quaternion.identity);
             Instantiate(Stair_Up, new Vector3(0.1f, 0.33f, 0f), Quaternion.identity);
@@ -195,5 +199,6 @@ public class MapManager : MonoBehaviour {
             Instantiate(Door2_2, new Vector3(16, 6, 0f), Quaternion.identity);
             Instantiate(Game_End_Door, new Vector3(5.8f, 1, 0f), Quaternion.identity);
         }
+
     }
 }

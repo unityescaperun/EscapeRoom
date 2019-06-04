@@ -16,5 +16,12 @@ public class itemDatabase : MonoBehaviour {
 
         // 스테이지 2
         // 요리재료 2개 독국뮬 요리 이상한 요리 키
+        items.Add(new Item("Material1", "고기", 3001, "신선한 고기다."));
+        items.Add(new Item("Material2", "버섯", 3002, "식용 버섯이다."));
+        items.Add(new Item("Material3", "파프리카", 3003, "신선하다."));
+        items.Add(new Item("Poison", "??", 3004, "수상한 액체"));
+        items.Add(new Item("Food1", "완성된 요리", 3005, "맛있어 보이는 요리"));
+        items.Add(new Item("Food2", "??? 요리", 6009, "수상한 요리"));
+        items.Add(new Item("Stage2Key", "열쇠", 3007, "출구 열쇠"));
     }
 }
