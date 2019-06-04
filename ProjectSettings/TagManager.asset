@@ -26,6 +26,11 @@ TagManager:
   - Cook
   - Material
   - ShelfPoison
+  - GameEnd
+  - Chain
+  - TV
+  - Bookshelf
+  - Clock
   layers:
   - Default
   - TransparentFX
