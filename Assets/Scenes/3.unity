@@ -215,6 +215,48 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9025970854108089930, guid: d039a9f62f9576d46b1a7024f062540f,
         type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Chain
+      value: 
+      objectReference: {fileID: 846903901370614896, guid: 5f44a12b54710904186fb4ba0e7b5bbc,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Table_Stage3
+      value: 
+      objectReference: {fileID: 3744163139691917807, guid: c5a0f80adfa84924583c757c41b0c599,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: TV
+      value: 
+      objectReference: {fileID: 3837498407381161211, guid: 7babec99c415d6549b89542a45289d03,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Bookshelf
+      value: 
+      objectReference: {fileID: 8909502067341708346, guid: bf858dc12c79c4d45a7dc26e1c8975eb,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Clock
+      value: 
+      objectReference: {fileID: 3437342155543422378, guid: 9e7af5cc69f42e542aa617485f4c638e,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Window3_1
+      value: 
+      objectReference: {fileID: 944215958812136984, guid: 4111ddc04dfd8af418649b46df1573e5,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Window3_2
+      value: 
+      objectReference: {fileID: 5339779292286541082, guid: a69bc50c70d96d94ebb967c1c3d7fae0,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c1dde809e361c4bb166750be9c8894, type: 3}
 --- !u!1 &519420028

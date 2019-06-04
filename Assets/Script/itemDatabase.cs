@@ -12,7 +12,7 @@ public class itemDatabase : MonoBehaviour {
         items.Add(new Item("Item2", "갈고리", 1002, "갈고리"));
         items.Add(new Item("Key2", "긴 막대기", 2003, "무언가를 헤집을 수 있을 것 같다."));
         items.Add(new Item("Key", "창문 열쇠", 2007, "창문의 열쇠와 비슷한가?."));
-        items.Add(new Item("Item5", "열쇠", 2009, "빨리 탈출해야겟다."));
+        items.Add(new Item("Stage2Key", "열쇠", 2009, "빨리 탈출해야겟다."));
 
         // 스테이지 2
         // 요리재료 2개 독국뮬 요리 이상한 요리 키
