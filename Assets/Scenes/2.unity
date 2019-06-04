@@ -519,7 +519,13 @@ PrefabInstance:
         type: 3}
       propertyPath: outerWall
       value: 
-      objectReference: {fileID: 9025970854108089930, guid: d039a9f62f9576d46b1a7024f062540f,
+      objectReference: {fileID: 495116611442854676, guid: 00428258547d8364daa56934d79577de,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: exit
+      value: 
+      objectReference: {fileID: 4193158352040778534, guid: b6585fcd1dd2e9d44aea018e97b17dd6,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c1dde809e361c4bb166750be9c8894, type: 3}

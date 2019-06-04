@@ -182,6 +182,7 @@ public class MapManager : MonoBehaviour {
             Instantiate(Table, new Vector3(25, -0.15f, 0f), Quaternion.identity);
             Instantiate(Chair2, new Vector3(27, -0.05f, 0f), Quaternion.identity);
             
+            Instantiate(exit, new Vector3(rows2 - 1, 0, 0f), Quaternion.identity);
         }  
     }
 }

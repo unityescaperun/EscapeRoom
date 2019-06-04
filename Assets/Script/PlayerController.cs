@@ -133,7 +133,9 @@ public class PlayerController : MonoBehaviour {
             {
                 Debug.Log("Finish");
                 if (Inventory.instance.inventoryContains(3007))
+                {
                     GameManager.EndGame();
+                }
                 else
                 {
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
@@ -142,6 +144,7 @@ public class PlayerController : MonoBehaviour {
 
             else if (other.tag == "Cook" && inputKey == true)
             {
+                if (Inventory.instance.inventoryContains(3001) && Inventory.instance.inventoryContains(3002) && Inventory.instance.inventoryContains(3003))
                 if (Inventory.instance.inventoryContains(3001) && Inventory.instance.inventoryContains(3002) && Inventory.instance.inventoryContains(3003))
                 {
                     other.GetComponent<Message>().dialogue.sentences[0] = "요리가 완성되었다!";
