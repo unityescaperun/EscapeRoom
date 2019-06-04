@@ -31,6 +31,7 @@ TagManager:
   - TV
   - Bookshelf
   - Clock
+  - Window
   layers:
   - Default
   - TransparentFX

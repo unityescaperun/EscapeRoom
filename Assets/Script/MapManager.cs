@@ -175,18 +175,18 @@ public class MapManager : MonoBehaviour {
         // 스테이지 1 오브젝트 구현     
         if (GameManager.stageLevel == 1) {
             Instantiate(exit, new Vector3(rows - 1, columns - 7, 0f), Quaternion.identity);
-            Instantiate(PortalUp, new Vector3(0, columns - 7, 0f), Quaternion.identity);
-            Instantiate(PortalDown, new Vector3(19, columns - 3, 0f), Quaternion.identity);
+            Instantiate(PortalUp, new Vector3(0, 0.3f, 0f), Quaternion.identity);
+            Instantiate(PortalDown, new Vector3(18.95f, 4.05f, 0f), Quaternion.identity);
             Instantiate(Box1, new Vector3(7, columns - 3, 0f), Quaternion.identity);
             Instantiate(Box2, new Vector3(3, columns - 7, 0f), Quaternion.identity);
-            Instantiate(Window1, new Vector3(0, columns - 2, 0f), Quaternion.identity);
-            Instantiate(Window1, new Vector3(2, columns - 2, 0f), Quaternion.identity);
-            Instantiate(Window1, new Vector3(4, columns - 2, 0f), Quaternion.identity);
-            Instantiate(Window1, new Vector3(6, columns - 2, 0f), Quaternion.identity);
-            Instantiate(Window2, new Vector3(10, columns - 2, 0f), Quaternion.identity);
-            Instantiate(Window1, new Vector3(12, columns - 2, 0f), Quaternion.identity);
-            Instantiate(Window1, new Vector3(14, columns - 2, 0f), Quaternion.identity);
-            Instantiate(Window1, new Vector3(16, columns - 2, 0f), Quaternion.identity);
+            Instantiate(Window1, new Vector3(1, columns - 2, 0f), Quaternion.identity);
+            Instantiate(Window1, new Vector3(3, columns - 2, 0f), Quaternion.identity);
+            Instantiate(Window1, new Vector3(5, columns - 2, 0f), Quaternion.identity);
+            Instantiate(Window1, new Vector3(7, columns - 2, 0f), Quaternion.identity);
+            Instantiate(Window2, new Vector3(11, columns - 2, 0f), Quaternion.identity);
+            Instantiate(Window1, new Vector3(13, columns - 2, 0f), Quaternion.identity);
+            Instantiate(Window1, new Vector3(15, columns - 2, 0f), Quaternion.identity);
+            Instantiate(Window1, new Vector3(17, columns - 2, 0f), Quaternion.identity);
             Instantiate(Fireplace, new Vector3(16, columns - 7, 0f), Quaternion.identity);
         }
         else if (GameManager.stageLevel == 2) {

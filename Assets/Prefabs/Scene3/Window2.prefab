@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7633060714565482992}
   m_Layer: 0
   m_Name: Window2
-  m_TagString: Window_1
+  m_TagString: Window
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: "\uADF8\uB0E5 \uCC3D\uBB38"
+    name: "\uCC3D\uBB38"
     sentences:
-    - "\uC774\uACF3\uC740 \uC544\uBB34\uAC83\uB3C4 \uC5C6\uB294\uAC83 \uAC19\uB2E4"
-    - "\uC885\uC774\uB97C \uB2E4\uC2DC \uD55C\uBC88 \uBCF4\uACE0\uC624\uC790"
+    - "\uBB34\uC5B8\uAC00 \uB9CE\uC774 \uC2DC\uB044\uB7EC\uC6B4\uAC83 \uAC19\uB2E4"
+    - "\uC5B4\uB5A4 \uC77C\uC774 \uC788\uB294\uAC70\uC9C0?"
