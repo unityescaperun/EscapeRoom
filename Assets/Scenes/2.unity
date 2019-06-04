@@ -526,6 +526,21 @@ PrefabInstance:
       propertyPath: exit
       value: 
       objectReference: {fileID: 4193158352040778534, guid: b6585fcd1dd2e9d44aea018e97b17dd6,
+      propertyPath: Stair_Down
+      value: 
+      objectReference: {fileID: 6228410940957190108, guid: d49dd993d1bc08b4883423c3849ec473,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Stair_Up
+      value: 
+      objectReference: {fileID: 8274281181985680433, guid: 4acce108eb9ca9f4f942a42b84d26c47,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: Game_End_Door
+      value: 
+      objectReference: {fileID: 7739924715466532126, guid: 950f30eecc102074aabcdd736552bc0d,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c1dde809e361c4bb166750be9c8894, type: 3}
