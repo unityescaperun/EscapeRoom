@@ -1,7 +1,8 @@
 fileFormatVersion: 2
-guid: da4fd515935f2da4aa9ace9b3aa3a883
+guid: 391af942c54359e458eaf2d4ced238c1
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: sewertiles_0
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -40,7 +41,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -104,11 +105,31 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sewertiles_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 53
+        width: 48
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d93d7456f3691b49a24c53f6a4716ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f9d10edd85c55104d9ff404ce1c908ad
+    spriteID: 0303d80286b8cd5418ab381d0bda4a87
     vertices: []
     indices: 
     edges: []
