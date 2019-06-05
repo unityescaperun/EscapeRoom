@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     public MapManager mapScript;
 
-    public static int stageLevel = 3;       
+    public static int stageLevel = 1;       
 
     void Awake() {
         if (instance == null)
@@ -31,8 +31,10 @@ public class GameManager : MonoBehaviour {
             Application.Quit();
         }
         else
+        {
+            FindObjectOfType<GameManager>().GetComponent<AudioSource>().Stop();
             SceneManager.LoadScene(stageLevel, LoadSceneMode.Single);
-
+        }
     }
     void Update() {
 

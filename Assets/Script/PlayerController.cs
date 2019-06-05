@@ -8,6 +8,10 @@ public class PlayerController : MonoBehaviour {
     GameObject Key;
     bool inputKey;
     bool solveProblem;
+    
+    // 스테이지2 퍼즐 체크
+    bool npcTalk = false; // npc와 먼저 대화를 했는지
+    bool needNew = false; // 음식을 거절당했는지
 
     private Inventory inven;
     private Rigidbody2D rb2D;
@@ -70,8 +74,10 @@ public class PlayerController : MonoBehaviour {
             if (other.tag == "Finish")
             {
                 Debug.Log("Finish");
-                if (Inventory.instance.inventoryContains(2009))
+                if (Inventory.instance.inventoryContains(2009)){
+                    FindObjectOfType<GameManager>().GetComponent<AudioSource>().Stop();
                     GameManager.EndGame();
+                }
                 else
                 {
                     //DialogueTrigger_Warning.instance.TriggerDialogue();
@@ -82,6 +88,7 @@ public class PlayerController : MonoBehaviour {
             else if (other.tag == "Box1")
             {
                 Debug.Log(other.GetComponent<Message>().dialogue.name);
+                other.GetComponent<AudioSource>().Play();
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
 
                 Inventory.instance.AddItem(1001);
@@ -91,10 +98,14 @@ public class PlayerController : MonoBehaviour {
             else if (other.tag == "FirePlace")
             {
                 Debug.Log(other.GetComponent<Message>().dialogue.name);
+                
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
 
                 if (Inventory.instance.inventoryContains(2003) && !Inventory.instance.inventoryContains(2007))
+                {
+                    other.GetComponent<AudioSource>().Play();
                     Inventory.instance.AddItem(2007);
+                }
 
                 solveProblem = true;
             }
@@ -110,6 +121,7 @@ public class PlayerController : MonoBehaviour {
             else if (other.tag == "Window_2" && solveProblem == true && Inventory.instance.inventoryContains(2007))
             {
                 Debug.Log(other.GetComponent<Message>().dialogue.name);
+                other.GetComponent<AudioSource>().Play();
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
 
                 if (!Inventory.instance.inventoryContains(2009))
@@ -120,8 +132,8 @@ public class PlayerController : MonoBehaviour {
             else if (other.tag == "Box2")
             {
                 Debug.Log("Box2");
+                other.GetComponent<AudioSource>().Play();
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
-                //DialogueTrigger.instance.TriggerDialogue();
 
                 Inventory.instance.AddItem(1002);
                 Destroy(other);
@@ -134,6 +146,7 @@ public class PlayerController : MonoBehaviour {
                 Debug.Log("Finish");
                 if (Inventory.instance.inventoryContains(3007))
                 {
+                    //FindObjectOfType<GameManager>().GetComponent<AudioSource>().Stop();
                     GameManager.EndGame();
                 }
                 else
@@ -144,7 +157,7 @@ public class PlayerController : MonoBehaviour {
 
             else if (other.tag == "Cook")
             {
-                if (Inventory.instance.inventoryContains(3001) && Inventory.instance.inventoryContains(3002) && Inventory.instance.inventoryContains(3003))
+                if (npcTalk == true && Inventory.instance.inventoryContains(3001) && Inventory.instance.inventoryContains(3002) && Inventory.instance.inventoryContains(3003))
                 {
                     other.GetComponent<AudioSource>().Play();
                     other.GetComponent<Message>().dialogue.sentences[0] = "요리가 완성되었다!";
@@ -157,14 +170,17 @@ public class PlayerController : MonoBehaviour {
                 }
                 else
                 {
-                    Debug.Log(other.GetComponent<Message>().dialogue.name);
-                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                    if(npcTalk == true)
+                    {
+                        Debug.Log(other.GetComponent<Message>().dialogue.name);
+                        FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                    }
                 }
             }
 
             else if (other.tag == "Material")
             {
-                if (Inventory.instance.inventoryContains(3001) == false && Inventory.instance.inventoryContains(3005) == false && Inventory.instance.inventoryContains(3006) == false && Inventory.instance.inventoryContains(3007) == false)
+                if (npcTalk == true && Inventory.instance.inventoryContains(3001) == false && Inventory.instance.inventoryContains(3005) == false && Inventory.instance.inventoryContains(3006) == false && Inventory.instance.inventoryContains(3007) == false)
                 {
                     Debug.Log("Get Item");
                     other.GetComponent<AudioSource>().Play();
@@ -172,7 +188,7 @@ public class PlayerController : MonoBehaviour {
                     Inventory.instance.AddItem(3001);
                     Destroy(other);
                 }
-                else if(Inventory.instance.inventoryContains(3001) && (Inventory.instance.inventoryContains(3002) == false))
+                else if(npcTalk == true && Inventory.instance.inventoryContains(3001) && (Inventory.instance.inventoryContains(3002) == false))
                 {
                     Debug.Log("Get Item");
                     other.GetComponent<AudioSource>().Play();
@@ -180,7 +196,7 @@ public class PlayerController : MonoBehaviour {
                     Inventory.instance.AddItem(3002);
                     Destroy(other);
                 }
-                else if(Inventory.instance.inventoryContains(3001) && Inventory.instance.inventoryContains(3002) && Inventory.instance.inventoryContains(3003) == false)
+                else if(npcTalk == true && Inventory.instance.inventoryContains(3001) && Inventory.instance.inventoryContains(3002) && Inventory.instance.inventoryContains(3003) == false)
                 {
                     Debug.Log("Get Item");
                     other.GetComponent<AudioSource>().Play();
@@ -193,9 +209,24 @@ public class PlayerController : MonoBehaviour {
             else if (other.tag == "NPC")
             {
                 Debug.Log(other.GetComponent<Message>().dialogue.name);
-                if (Inventory.instance.inventoryContains(3005))
+                
+                if(npcTalk == false)
+                {
+                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                    npcTalk = true;
+                }
+                if (npcTalk == true && Inventory.instance.inventoryContains(3005) == false && Inventory.instance.inventoryContains(6009) == false)
+                {
+                    other.GetComponent<Message>().dialogue.sentences[0] = "어서 먹을 것을 가져오라고!";
+                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                }
+                if (npcTalk == true && Inventory.instance.inventoryContains(3005))
+                {
                     other.GetComponent<Message>().dialogue.sentences[0] = "이딴 음식을 먹으라고 가져오다니!";
-                else if (Inventory.instance.inventoryContains(6009))
+                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                    needNew = true;
+                }
+                else if (npcTalk == true && needNew == true && Inventory.instance.inventoryContains(6009))
                 {
                     other.GetComponent<Message>().dialogue.sentences[0] = "커억!";
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
@@ -204,18 +235,13 @@ public class PlayerController : MonoBehaviour {
                     Inventory.instance.AddItem(3007);
                     Destroy(other);
                 }
-                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
-                if (Inventory.instance.inventoryContains(3005) == false && Inventory.instance.inventoryContains(3006) == false)
-                {
-                    other.GetComponent<Message>().dialogue.sentences[0] = "어서 먹을 것을 가져오라고!";
-                }
             }
 
             else if(other.tag == "ShelfPoison")
             {
                 Debug.Log("Get Item");
 
-                if(Inventory.instance.inventoryContains(3004) == false && Inventory.instance.inventoryContains(3005) == true)
+                if(npcTalk == true && needNew == true && Inventory.instance.inventoryContains(3004) == false && Inventory.instance.inventoryContains(3005) == true)
                 {
                     other.GetComponent<AudioSource>().Play();
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
