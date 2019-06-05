@@ -9,7 +9,7 @@ public class MapManager : MonoBehaviour {
     int columns2 = 5;
     int rows2 = 45;
     int columns3 = 11;
-    int rows3 = 29;
+    int rows3 = 70;
 
     bool DoorOpen = false;
 
@@ -71,6 +71,7 @@ public class MapManager : MonoBehaviour {
     public GameObject Window3_2;
     public GameObject Picture3_1;
     public GameObject Picture3_2;
+    public GameObject PC;
 
 
     private Transform boardHolder;
@@ -150,10 +151,10 @@ public class MapManager : MonoBehaviour {
         // 스테이지 3
         else if (GameManager.stageLevel == 3) {
             Debug.Log("월드3");
-            for (int x = -1; x < rows3 + 1; x++) {
+            for (int x = -1; x < 29 + 1; x++) {
                 for (int y = -1; y < columns3 + 1; y++) {
                     GameObject toInsatantiate = wall;
-                    if (x == -1 || x == 13 || x == 15 || x == rows3)
+                    if (x == -1 || x == 13 || x == 15 || x == 29)
                         toInsatantiate = outerWall;
                     else if (x == 14 || x == 30)
                         continue;
@@ -165,6 +166,8 @@ public class MapManager : MonoBehaviour {
                     instance.transform.SetParent(boardHolder);
                 }
             }
+
+         //   for(int i = )
         }
     }
 
@@ -178,8 +181,8 @@ public class MapManager : MonoBehaviour {
             Instantiate(exit, new Vector3(rows - 1, columns - 7, 0f), Quaternion.identity);
             Instantiate(PortalUp, new Vector3(0.1f, 0.0f, 0f), Quaternion.identity);
             Instantiate(PortalDown, new Vector3(18.95f, 4.05f, 0f), Quaternion.identity);
-            Instantiate(Box1, new Vector3(7, 4.2f, 0f), Quaternion.identity);
-            Instantiate(Box2, new Vector3(3, 0.2f, 0f), Quaternion.identity);
+            Instantiate(Box1, new Vector3(7, 3.85f, 0f), Quaternion.identity);
+            Instantiate(Box2, new Vector3(3, -0.14f, 0f), Quaternion.identity);
             Instantiate(Window1, new Vector3(1, columns - 2, 0f), Quaternion.identity);
             Instantiate(Window1, new Vector3(3, columns - 2, 0f), Quaternion.identity);
             Instantiate(Window1, new Vector3(5, columns - 2, 0f), Quaternion.identity);
@@ -241,6 +244,7 @@ public class MapManager : MonoBehaviour {
             Instantiate(Picture3_2, new Vector3(3.3f, 1.5f, 0f), Quaternion.identity);
             Instantiate(Clock, new Vector3(24, 0.4f, 0f), Quaternion.identity);
             Instantiate(TV, new Vector3(20, 0.48f, 0f), Quaternion.identity);
+            Instantiate(PC, new Vector3(5, 5.9f, 0f), Quaternion.identity);
             Instantiate(Game_End_Door, new Vector3(5.8f, 1, 0f), Quaternion.identity);
         }
 

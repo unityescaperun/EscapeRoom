@@ -275,6 +275,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3835992695910178709, guid: ca9c1310091709844a746fe004de484c,
         type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: PC
+      value: 
+      objectReference: {fileID: 8488416017100034995, guid: 70bea9eec8cd0934dab010d36e574f4b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c1dde809e361c4bb166750be9c8894, type: 3}
 --- !u!1 &519420028
@@ -760,6 +766,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304f577de74a09d45826978fbecbf87d, type: 3}
+--- !u!1001 &7040121535017886312
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7040121533601014660, guid: 5b2d8504929f23043af9f2c0ad684723,
+        type: 3}
+      propertyPath: m_Name
+      value: Ruined City Background Preview
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040121533601014662, guid: 5b2d8504929f23043af9f2c0ad684723,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 19.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040121533601014662, guid: 5b2d8504929f23043af9f2c0ad684723,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040121533601014662, guid: 5b2d8504929f23043af9f2c0ad684723,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040121533601014662, guid: 5b2d8504929f23043af9f2c0ad684723,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040121533601014662, guid: 5b2d8504929f23043af9f2c0ad684723,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040121533601014662, guid: 5b2d8504929f23043af9f2c0ad684723,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040121533601014662, guid: 5b2d8504929f23043af9f2c0ad684723,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040121533601014662, guid: 5b2d8504929f23043af9f2c0ad684723,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040121533601014662, guid: 5b2d8504929f23043af9f2c0ad684723,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040121533601014662, guid: 5b2d8504929f23043af9f2c0ad684723,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040121533601014662, guid: 5b2d8504929f23043af9f2c0ad684723,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b2d8504929f23043af9f2c0ad684723, type: 3}
 --- !u!1001 &7273694608444236072
 PrefabInstance:
   m_ObjectHideFlags: 0
