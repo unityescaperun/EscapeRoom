@@ -171,14 +171,15 @@ public class MapManager : MonoBehaviour {
     public void SetupScene() {
         Boardsetup();
         InitialiseList();
-
+        
         // 스테이지 1 오브젝트 구현     
         if (GameManager.stageLevel == 1) {
+            FindObjectOfType<GameManager>().GetComponent<AudioSource>().Play();
             Instantiate(exit, new Vector3(rows - 1, columns - 7, 0f), Quaternion.identity);
-            Instantiate(PortalUp, new Vector3(0, 0.3f, 0f), Quaternion.identity);
+            Instantiate(PortalUp, new Vector3(0.1f, 0.0f, 0f), Quaternion.identity);
             Instantiate(PortalDown, new Vector3(18.95f, 4.05f, 0f), Quaternion.identity);
-            Instantiate(Box1, new Vector3(7, columns - 3, 0f), Quaternion.identity);
-            Instantiate(Box2, new Vector3(3, columns - 7, 0f), Quaternion.identity);
+            Instantiate(Box1, new Vector3(7, 4.2f, 0f), Quaternion.identity);
+            Instantiate(Box2, new Vector3(3, 0.2f, 0f), Quaternion.identity);
             Instantiate(Window1, new Vector3(1, columns - 2, 0f), Quaternion.identity);
             Instantiate(Window1, new Vector3(3, columns - 2, 0f), Quaternion.identity);
             Instantiate(Window1, new Vector3(5, columns - 2, 0f), Quaternion.identity);
@@ -187,7 +188,7 @@ public class MapManager : MonoBehaviour {
             Instantiate(Window1, new Vector3(13, columns - 2, 0f), Quaternion.identity);
             Instantiate(Window1, new Vector3(15, columns - 2, 0f), Quaternion.identity);
             Instantiate(Window1, new Vector3(17, columns - 2, 0f), Quaternion.identity);
-            Instantiate(Fireplace, new Vector3(16, columns - 7, 0f), Quaternion.identity);
+            Instantiate(Fireplace, new Vector3(16, 0.2f, 0f), Quaternion.identity);
         }
         else if (GameManager.stageLevel == 2) {
             Instantiate(Door1_1, new Vector3(12, 0, 0f), Quaternion.identity);
