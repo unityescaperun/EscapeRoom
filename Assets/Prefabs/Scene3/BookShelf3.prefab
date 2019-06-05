@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8934420055152238993}
   - component: {fileID: 8934420055152238992}
   - component: {fileID: 8934420055152238995}
+  - component: {fileID: 5060686890379767228}
   m_Layer: 0
   m_Name: BookShelf3
   m_TagString: Bookshelf2
@@ -106,3 +107,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.65, y: 0.61}
   m_EdgeRadius: 0
+--- !u!114 &5060686890379767228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8934420055152238994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17e14f66af6b0f4e8218bda7759ed46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "\uC11C\uB78D\uC7A5"
+    sentences:
+    - "\uB9DD\uCE58\uB97C \uCC3E\uC558\uB2E4"

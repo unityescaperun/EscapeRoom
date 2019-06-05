@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 2249441445772933692}
   - component: {fileID: 2249441445772933693}
   - component: {fileID: 2249441445772933694}
+  - component: {fileID: 8149767641126865522}
   m_Layer: 0
   m_Name: FlowerVase3
-  m_TagString: Untagged
+  m_TagString: Electircity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,3 +107,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.53, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8149767641126865522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2249441445772933695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17e14f66af6b0f4e8218bda7759ed46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "\uD654\uBD84 \uB4A4 \uCF58\uC13C\uD2B8"
+    sentences:
+    - "\uCF58\uC13C\uD2B8\uB97C \uC5F0\uACB0\uD558\uC600\uB2E4....."
+    - "\uCEF4\uD4E8\uD130\uAC00 \uCF1C\uC9C4 \uAC83 \uAC19\uB2E4."

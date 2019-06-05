@@ -280,10 +280,10 @@ public class MapManager : MonoBehaviour {
             Instantiate(FlowerVase1, new Vector3(26, -0.15f, 0f), Quaternion.identity);
             Instantiate(FlowerVase2, new Vector3(7, 6, 0f), Quaternion.identity);
             Instantiate(Game_End_Door, new Vector3(5.8f, 1, 0f), Quaternion.identity);
-            Instantiate(Jail1, new Vector3(61, 0.44f, 0f), Quaternion.identity);
-            Instantiate(Jail2, new Vector3(59, 0.44f, 0f), Quaternion.identity);
-            Instantiate(Jail3, new Vector3(57, 0.44f, 0f), Quaternion.identity);
-            Instantiate(Jail4, new Vector3(55, 0.44f, 0f), Quaternion.identity);
+            Instantiate(Jail1, new Vector3(55, 0.44f, 0f), Quaternion.identity);
+            Instantiate(Jail2, new Vector3(57, 0.44f, 0f), Quaternion.identity);
+            Instantiate(Jail3, new Vector3(59, 0.44f, 0f), Quaternion.identity);
+            Instantiate(Jail4, new Vector3(61, 0.44f, 0f), Quaternion.identity);
         }
 
     }

@@ -36,6 +36,8 @@ TagManager:
   - Jail
   - Shelf
   - Bookshelf2
+  - Piano
+  - Electircity
   layers:
   - Default
   - TransparentFX
