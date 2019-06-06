@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 6897250334313248139}
   - component: {fileID: 6897250334313248140}
   - component: {fileID: 6897250334313248141}
+  - component: {fileID: 1856453234401477027}
+  - component: {fileID: 4737600201416792166}
   m_Layer: 0
   m_Name: Piano
-  m_TagString: Untagged
+  m_TagString: Piano
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,3 +108,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1856453234401477027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6897250334313248142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa53040546e604478da48e357177ec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xPos: 51
+  yPos: 0
+--- !u!114 &4737600201416792166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6897250334313248142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17e14f66af6b0f4e8218bda7759ed46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "\uD53C\uC544\uB178"
+    sentences:
+    - "\uB2E8\uC21C\uD55C \uD53C\uC544\uB178\uC778\uAC00?????"
+    - '..............'
+    - "\uB4A4\uC5D0 \uBB34\uC5B8\uAC00 \uC788\uB294 \uAC83 \uAC19\uB2E4."
+    - "\uC5B4\uB514\uB85C \uD1B5\uD558\uB294 \uBB38\uC778\uC9C0 \uC798 \uBAA8\uB974\uACA0\uB2E4....."
+    - "\uC5F4 \uBC29\uBC95\uC744 \uCC3E\uC544\uBCF4\uC790."

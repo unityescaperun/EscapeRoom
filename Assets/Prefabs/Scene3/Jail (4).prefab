@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1616102984671369426}
   - component: {fileID: 1616102984671369437}
   - component: {fileID: 1616102984671369436}
+  - component: {fileID: 1999731534903414727}
   m_Layer: 0
   m_Name: Jail (4)
   m_TagString: Jail
@@ -106,3 +107,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1999731534903414727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616102984671369439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17e14f66af6b0f4e8218bda7759ed46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "\uC815\uCCB4\uBD88\uBA85\uC758 \uC5EC\uC790"
+    sentences:
+    - "\uC57C\uC774 \uBBF8\uCE5C\uC0C8\uB07C\uC57C!!!!!"
+    - "\uBE68\uB9AC \uD480\uC5B4\uB2EC\uB77C\uACE0..........."
+    - "\u315C\u315C\u315C\u315C\u315C\u315C\u315C\u315C\u315C\u315C\u315C"
+    - "\uD55C\uBC88\uB9CC \uC0B4\uB824\uC8FC\uC138\uC694 \u315C\u315C\u315C\u315C"
+    - "\uC544\uBB34\uD55C\uD14C\uB3C4 \uB9D0 \uC548\uD560\uAC8C\uC694.............."
