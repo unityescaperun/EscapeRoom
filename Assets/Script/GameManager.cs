@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
 
     private FadeManager fadeScript;
 
-    public static int stageLevel = 2;       
+    public static int stageLevel = 1;       
 
     void Awake() {
         if (instance == null)
@@ -19,15 +19,16 @@ public class GameManager : MonoBehaviour {
 
         DontDestroyOnLoad(gameObject);
         mapScript = GetComponent<MapManager>();
+        fadeScript = FindObjectOfType<FadeManager>();
         InitGame();
     }
 
     void Start() {
-        fadeScript = FindObjectOfType<FadeManager>();
     }
 
     void InitGame() {
         mapScript.SetupScene();
+        FadeManager.instance.FadeIn();
     }
 
     public void EndGame() {
@@ -38,8 +39,7 @@ public class GameManager : MonoBehaviour {
         }
         else {
             StartCoroutine(FadeOutCoroutine());
-        }
-        
+        }      
     }
 
     IEnumerator FadeOutCoroutine() {
@@ -50,8 +50,7 @@ public class GameManager : MonoBehaviour {
     }
 
     IEnumerator FadeInCoroutine() {
-        mapScript.SetupScene();
         yield return new WaitForSeconds(1f);
-        FadeManager.instance.FadeIn();
+        
     }
 }
