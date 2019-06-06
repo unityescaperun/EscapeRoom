@@ -32,6 +32,14 @@ TagManager:
   - Bookshelf
   - Clock
   - Window
+  - PC
+  - Jail
+  - Shelf
+  - Bookshelf2
+  - Piano
+  - Electricity
+  - Picture
+  - USB_Vase
   layers:
   - Default
   - TransparentFX

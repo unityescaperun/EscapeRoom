@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3437342155543422376}
   - component: {fileID: 3437342155543422377}
   - component: {fileID: 3437342155543422358}
+  - component: {fileID: 6562190962385026449}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Clock
@@ -126,3 +127,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6562190962385026449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3437342155543422378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17e14f66af6b0f4e8218bda7759ed46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "\uC2DC\uACC4"
+    sentences:
+    - "\uCD94\uB294 \uC6C0\uC9C1\uC774\uB294\uB370.... \uC791\uB3D9\uC744 \uD558\uC9C0
+      \uC54A\uB294\uB2E4"
+    - "\uC9C0\uAE08\uC774 7\uC2DC 35\uBD84\uC774\uB77C\uACE0????"
