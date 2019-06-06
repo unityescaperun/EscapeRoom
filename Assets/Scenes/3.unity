@@ -359,6 +359,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7879921265562984811, guid: c304cbb22b27e304a86cede610e289a0,
         type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: JailDoor
+      value: 
+      objectReference: {fileID: 8665242737542918923, guid: 305973e9693c3ff4faf9fac006f37e48,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c1dde809e361c4bb166750be9c8894, type: 3}
 --- !u!1 &519420028

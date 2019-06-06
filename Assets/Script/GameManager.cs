@@ -7,7 +7,9 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     public MapManager mapScript;
 
-    public static int stageLevel = 3;       
+    private FadeManager fadeScript;
+
+    public static int stageLevel = 2;       
 
     void Awake() {
         if (instance == null)
@@ -20,23 +22,36 @@ public class GameManager : MonoBehaviour {
         InitGame();
     }
 
+    void Start() {
+        fadeScript = FindObjectOfType<FadeManager>();
+    }
+
     void InitGame() {
         mapScript.SetupScene();
     }
 
-    public static void EndGame() {
+    public void EndGame() {
         stageLevel++;
         // 마지막 스테이지 설정
         if (stageLevel == 4) {
             Application.Quit();
         }
-        else
-        {
-            FindObjectOfType<GameManager>().GetComponent<AudioSource>().Stop();
-            SceneManager.LoadScene(stageLevel, LoadSceneMode.Single);
+        else {
+            StartCoroutine(FadeOutCoroutine());
         }
+        
     }
-    void Update() {
 
+    IEnumerator FadeOutCoroutine() {
+        FadeManager.instance.FadeOut();
+        FindObjectOfType<GameManager>().GetComponent<AudioSource>().Stop();
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(stageLevel, LoadSceneMode.Single);
+    }
+
+    IEnumerator FadeInCoroutine() {
+        mapScript.SetupScene();
+        yield return new WaitForSeconds(1f);
+        FadeManager.instance.FadeIn();
     }
 }
