@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour {
                 Debug.Log("Finish");
                 if (Inventory.instance.inventoryContains(2009)) {
                     FindObjectOfType<GameManager>().GetComponent<AudioSource>().Stop();
-                    GameManager.EndGame();
+                    GameManager.instance.EndGame();
                 }
                 else {
                     //DialogueTrigger_Warning.instance.TriggerDialogue();
@@ -161,7 +161,7 @@ public class PlayerController : MonoBehaviour {
                 Debug.Log("Finish");
                 if (Inventory.instance.inventoryContains(3007)) {
                     //FindObjectOfType<GameManager>().GetComponent<AudioSource>().Stop();
-                    GameManager.EndGame();
+                    GameManager.instance.EndGame();
                 }
                 else {
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
