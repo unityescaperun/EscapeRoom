@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour {
     public void EndGame() {
         stageLevel++;
         // 마지막 스테이지 설정
-        if (stageLevel == 4) {
+        if (stageLevel == 5) {
             Application.Quit();
         }
         else {
