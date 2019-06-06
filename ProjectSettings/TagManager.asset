@@ -37,7 +37,9 @@ TagManager:
   - Shelf
   - Bookshelf2
   - Piano
-  - Electircity
+  - Electricity
+  - Picture
+  - USB_Vase
   layers:
   - Default
   - TransparentFX

@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3308876027425831615}
   - component: {fileID: 3308876027425831614}
   - component: {fileID: 3308876027425831613}
+  - component: {fileID: 2462266345461831537}
   m_Layer: 0
   m_Name: Picture1
-  m_TagString: Untagged
+  m_TagString: Picture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,3 +107,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 1.1}
   m_EdgeRadius: 0
+--- !u!114 &2462266345461831537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3308876027425831612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17e14f66af6b0f4e8218bda7759ed46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "\uADF8\uB9BC"
+    sentences:
+    - "\uC544\uAE4C \uC2DD\uB2F9\uC5D0 \uC788\uB358 \uC544\uC774\uC758 \uC0AC\uC9C4\uC774\uB2E4...."
+    - "\uC704\uB85C \uC62C\uB77C\uAC00 \uBCF4\uC790."

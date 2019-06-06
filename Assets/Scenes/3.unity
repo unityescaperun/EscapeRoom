@@ -353,6 +353,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1616102984671369439, guid: 9a064487c07cd5148955e4e489d7d4f8,
         type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: FlowerVase1_1
+      value: 
+      objectReference: {fileID: 7879921265562984811, guid: c304cbb22b27e304a86cede610e289a0,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c1dde809e361c4bb166750be9c8894, type: 3}
 --- !u!1 &519420028
