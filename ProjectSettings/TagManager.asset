@@ -40,6 +40,7 @@ TagManager:
   - Electricity
   - Picture
   - USB_Vase
+  - JailDoor
   layers:
   - Default
   - TransparentFX

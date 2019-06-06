@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody2D rb2D;
     public Dialogue dialogue;
     public SpriteRenderer render;
+    public Sprite None;
 
     Vector2 MoveVelocity;
     public float Speed = 5f;
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour {
         PianoTrigger = false;
         electricityOn = false;
         PCTrigger = false;
+        None = null;
 
         if (GameManager.stageLevel == 3)
             canDown = false;
@@ -303,8 +305,9 @@ public class PlayerController : MonoBehaviour {
             else if(other.tag == "USB_Vase") {
                 if (Inventory.instance.inventoryContains(4013)) {
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
-                    Inventory.instance.AddItem(4003);
-                    Destroy(other);
+                    if(!Inventory.instance.inventoryContains(4003))
+                        Inventory.instance.AddItem(4003);
+                    other.GetComponent<SpriteRenderer>().sprite = None;
                 }
             }
 
@@ -328,6 +331,10 @@ public class PlayerController : MonoBehaviour {
 
             else if (other.tag == "Jail") {
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+            }
+
+            else if(other.tag == "JailDoor") {
+                FindObjectOfType<PortalController>().Teleport(player, other.GetComponent<PortalPosition>());
             }
 
         }
