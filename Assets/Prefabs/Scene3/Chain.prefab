@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 846903901370614902}
   - component: {fileID: 846903901370614897}
   - component: {fileID: 846903901370614900}
+  - component: {fileID: 2796588047649486025}
   m_Layer: 0
   m_Name: Chain
   m_TagString: Chain
@@ -126,3 +127,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2796588047649486025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846903901370614896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17e14f66af6b0f4e8218bda7759ed46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "\uCC9C\uC7A5\uC5D0 \uAC78\uB824\uC788\uB294 \uC1E0\uC0AC\uC2AC"
+    sentences:
+    - "\uC774\uB7F0\uAC8C \uCC9C\uC7A5\uC5D0 \uC65C \uC788\uB294\uAC70\uC9C0????"
+    - '................'
+    - "\uB2F9\uAE38 \uC218 \uC788\uC744\uAC70\uAC19\uC740\uB370 \uB2F9\uAE38 \uC218\uAC00
+      \uC5C6\uB2E4"
+    - "\uBC29\uBC95\uC744 \uCC3E\uC544\uBCF4\uC790."

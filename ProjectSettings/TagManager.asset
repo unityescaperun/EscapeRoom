@@ -32,6 +32,15 @@ TagManager:
   - Bookshelf
   - Clock
   - Window
+  - PC
+  - Jail
+  - Shelf
+  - Bookshelf2
+  - Piano
+  - Electricity
+  - Picture
+  - USB_Vase
+  - JailDoor
   layers:
   - Default
   - TransparentFX
@@ -83,4 +92,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2819049019
+    locked: 0
+  - name: UI
+    uniqueID: 3946740911
     locked: 0
