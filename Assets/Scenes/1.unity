@@ -817,12 +817,12 @@ PrefabInstance:
     - target: {fileID: 5306219920304393239, guid: f816a5a8de5313a4b81bdbee257a8f9a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 6.6
       objectReference: {fileID: 0}
     - target: {fileID: 5306219920304393239, guid: f816a5a8de5313a4b81bdbee257a8f9a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 5306219920304393239, guid: f816a5a8de5313a4b81bdbee257a8f9a,
         type: 3}
@@ -868,6 +868,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5306219920304393239, guid: f816a5a8de5313a4b81bdbee257a8f9a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5306219920304393239, guid: f816a5a8de5313a4b81bdbee257a8f9a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f816a5a8de5313a4b81bdbee257a8f9a, type: 3}
@@ -1072,6 +1082,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 107064177}
+    - target: {fileID: 9136371334265715947, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -471.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136371334265715947, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -227.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136371334265715947, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 25.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136371334265715947, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 13.650001
+      objectReference: {fileID: 0}
     - target: {fileID: 7454112387684271241, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1091,6 +1121,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -17.478
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686457834347401046, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 857e7dfbea04b8647bb923b28d2fbbd5, type: 3}

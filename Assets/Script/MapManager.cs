@@ -80,6 +80,7 @@ public class MapManager : MonoBehaviour {
     public GameObject FlowerVase1;
     public GameObject FlowerVase1_1;
     public GameObject FlowerVase2;
+    public GameObject JailDoor;
     public GameObject Jail1;
     public GameObject Jail2;
     public GameObject Jail3;
@@ -281,6 +282,7 @@ public class MapManager : MonoBehaviour {
             Instantiate(FlowerVase1, new Vector3(26, -0.15f, 0f), Quaternion.identity);
             Instantiate(FlowerVase2, new Vector3(7, 6, 0f), Quaternion.identity);
             Instantiate(Game_End_Door, new Vector3(5.8f, 1, 0f), Quaternion.identity);
+            Instantiate(JailDoor, new Vector3(50.12f, 0.2f, 0f), Quaternion.identity);
             Instantiate(Jail1, new Vector3(55, 0.44f, 0f), Quaternion.identity);
             Instantiate(Jail2, new Vector3(57, 0.44f, 0f), Quaternion.identity);
             Instantiate(Jail3, new Vector3(59, 0.44f, 0f), Quaternion.identity);
