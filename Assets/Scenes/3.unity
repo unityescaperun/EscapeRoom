@@ -365,6 +365,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8665242737542918923, guid: 305973e9693c3ff4faf9fac006f37e48,
         type: 3}
+    - target: {fileID: 6907307100633831623, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: stage1
+      value: 
+      objectReference: {fileID: 8300000, guid: eb414cb73c4f7544cab2b3ae0c28d06d, type: 3}
+    - target: {fileID: 6907307100633831623, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: stage2
+      value: 
+      objectReference: {fileID: 8300000, guid: 7b2129955f7aebc469ae85ff862b0522, type: 3}
+    - target: {fileID: 6907307100633831623, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: stage3
+      value: 
+      objectReference: {fileID: 8300000, guid: ed2ca3ab0a383b1489135220b4a2f802, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c1dde809e361c4bb166750be9c8894, type: 3}
 --- !u!1 &519420028

@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour {
 
     public static int stageLevel = 1;       
 
+    public AudioClip stage1;
+    public AudioClip stage2;
+    public AudioClip stage3;
+
     void Awake() {
         if (instance == null)
             instance = this;
@@ -44,9 +48,14 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator FadeOutCoroutine() {
         FadeManager.instance.FadeOut();
-        FindObjectOfType<GameManager>().GetComponent<AudioSource>().Stop();
+        //FindObjectOfType<GameManager>().GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(stageLevel, LoadSceneMode.Single);
+        if(stageLevel == 2)
+            FindObjectOfType<GameManager>().GetComponent<AudioSource>().clip = stage2;
+        else if(stageLevel == 3)
+            FindObjectOfType<GameManager>().GetComponent<AudioSource>().clip = stage3;
+        FindObjectOfType<GameManager>().GetComponent<AudioSource>().Play();
     }
 
     IEnumerator FadeInCoroutine() {
