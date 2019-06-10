@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
 
     private FadeManager fadeScript;
 
-    public static int stageLevel = 1;       
+    public static int stageLevel = 3;       
 
     public AudioClip stage1;
     public AudioClip stage2;
