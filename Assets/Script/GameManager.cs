@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
 
     private FadeManager fadeScript;
 
-    public static int stageLevel = 3;       
+    public static int stageLevel = 2;       
 
     void Awake() {
         if (instance == null)
