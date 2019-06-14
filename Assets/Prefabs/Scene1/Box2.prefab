@@ -121,10 +121,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Box2
+    name: "\uC0C1\uC790"
     sentences:
-    - "\uB098\uB294"
-    - "\uBC15\uC2A42"
+    - "\uC0C1\uC790\uB97C \uC5F4\uC5C8\uB2E4."
 --- !u!82 &854518931510356884
 AudioSource:
   m_ObjectHideFlags: 0

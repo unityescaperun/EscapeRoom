@@ -215,6 +215,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5639897808268184236, guid: 1d8389c482eb34f4a93a977950a35f4a,
         type: 3}
+    - target: {fileID: 6907307100633831623, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: stage1
+      value: 
+      objectReference: {fileID: 8300000, guid: eb414cb73c4f7544cab2b3ae0c28d06d, type: 3}
+    - target: {fileID: 6907307100633831623, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: stage2
+      value: 
+      objectReference: {fileID: 8300000, guid: 7b2129955f7aebc469ae85ff862b0522, type: 3}
+    - target: {fileID: 6907307100633831623, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: stage3
+      value: 
+      objectReference: {fileID: 8300000, guid: ed2ca3ab0a383b1489135220b4a2f802, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c1dde809e361c4bb166750be9c8894, type: 3}
 --- !u!1 &519420028
@@ -1085,12 +1100,12 @@ PrefabInstance:
     - target: {fileID: 9136371334265715947, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -471.9
+      value: -304
       objectReference: {fileID: 0}
     - target: {fileID: 9136371334265715947, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -227.9
+      value: -229
       objectReference: {fileID: 0}
     - target: {fileID: 9136371334265715947, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
         type: 3}
@@ -1101,6 +1116,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 13.650001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686457834347401046, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7454112387684271241, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
         type: 3}
@@ -1121,11 +1141,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -17.478
-      objectReference: {fileID: 0}
-    - target: {fileID: 2686457834347401046, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 857e7dfbea04b8647bb923b28d2fbbd5, type: 3}

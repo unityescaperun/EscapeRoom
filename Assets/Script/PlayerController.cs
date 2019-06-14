@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour {
     bool electricityOn;
     bool PCTrigger;
     bool canDown;
+    bool EndTrigger;
 
     private Inventory inven;
     private Rigidbody2D rb2D;
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour {
         PianoTrigger = false;
         electricityOn = false;
         PCTrigger = false;
+        EndTrigger = false;
         None = null;
 
         if (GameManager.stageLevel == 3)
@@ -99,7 +101,6 @@ public class PlayerController : MonoBehaviour {
             if (other.tag == "Finish") {
                 Debug.Log("Finish");
                 if (Inventory.instance.inventoryContains(2009)) {
-                    FindObjectOfType<GameManager>().GetComponent<AudioSource>().Stop();
                     GameManager.instance.EndGame();
                 }
                 else {
@@ -120,14 +121,23 @@ public class PlayerController : MonoBehaviour {
             else if (other.tag == "FirePlace") {
                 Debug.Log(other.GetComponent<Message>().dialogue.name);
 
-                FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
-
-                if (Inventory.instance.inventoryContains(2003) && !Inventory.instance.inventoryContains(2007)) {
+                if (!Inventory.instance.inventoryContains(2003)) {
+                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                }
+                else if (Inventory.instance.inventoryContains(2003) && !Inventory.instance.inventoryContains(2007)) {
+                    other.GetComponent<Message>().dialogue.sentences[0] = "열쇠와 화로에 적힌 글을 발견하였다.";
+                    other.GetComponent<Message>().dialogue.sentences[1] = "INT_MAX에 없는 숫자는 무엇일까요?";
+                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
                     other.GetComponent<AudioSource>().Play();
                     Inventory.instance.AddItem(2007);
+                    solveProblem = true;
                 }
-
-                solveProblem = true;
+                else if (Inventory.instance.inventoryContains(2003) && Inventory.instance.inventoryContains(2007) && solveProblem == false) {
+                    other.GetComponent<Message>().dialogue.sentences[0] = "글을 다시 살펴보았다.";
+                    other.GetComponent<Message>().dialogue.sentences[1] = "INT_MAX에 없는 숫자는 무엇일까요?";
+                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                    solveProblem = true;
+                }
             }
 
             else if (other.tag == "Window_1" && solveProblem == true && Inventory.instance.inventoryContains(2007)) {
@@ -228,6 +238,7 @@ public class PlayerController : MonoBehaviour {
                     needNew = true;
                 }
                 else if (npcTalk == true && needNew == true && Inventory.instance.inventoryContains(6009)) {
+                    other.GetComponent<AudioSource>().Play();
                     other.GetComponent<Message>().dialogue.sentences[0] = "커억!";
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
 
@@ -258,9 +269,7 @@ public class PlayerController : MonoBehaviour {
             else if (other.tag == "Picture") {
                 canDown = true;
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
-
             }
-
 
             else if (other.tag == "Window") {
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
@@ -301,11 +310,11 @@ public class PlayerController : MonoBehaviour {
             else if (other.tag == "Clock") {
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
             }
-            
-            else if(other.tag == "USB_Vase") {
+
+            else if (other.tag == "USB_Vase") {
                 if (Inventory.instance.inventoryContains(4013)) {
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
-                    if(!Inventory.instance.inventoryContains(4003))
+                    if (!Inventory.instance.inventoryContains(4003))
                         Inventory.instance.AddItem(4003);
                     other.GetComponent<SpriteRenderer>().sprite = None;
                 }
@@ -333,10 +342,20 @@ public class PlayerController : MonoBehaviour {
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
             }
 
-            else if(other.tag == "JailDoor") {
+            else if (other.tag == "JailDoor") {
                 FindObjectOfType<PortalController>().Teleport(player, other.GetComponent<PortalPosition>());
+                EndTrigger = true;
             }
 
+            else if (other.tag == "Chain") {
+                if (EndTrigger == false) {
+                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                }
+                else {
+                    if (!Inventory.instance.inventoryContains(5007))
+                        Inventory.instance.AddItem(5007);
+                }
+            }
         }
     }
 }
