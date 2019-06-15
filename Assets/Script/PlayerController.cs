@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour {
     bool electricityOn;
     bool PCTrigger;
     bool canDown;
+    bool headacheTrigger;
+    bool EndTrigger;
 
     private Inventory inven;
     private Rigidbody2D rb2D;
@@ -38,6 +40,8 @@ public class PlayerController : MonoBehaviour {
         PianoTrigger = false;
         electricityOn = false;
         PCTrigger = false;
+        headacheTrigger = false;
+        EndTrigger = false;
         None = null;
 
         if (GameManager.stageLevel == 3)
@@ -118,12 +122,11 @@ public class PlayerController : MonoBehaviour {
 
             else if (other.tag == "FirePlace") {
                 Debug.Log(other.GetComponent<Message>().dialogue.name);
-                
-                if(!Inventory.instance.inventoryContains(2003))
-                {
+
+                if (!Inventory.instance.inventoryContains(2003)) {
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
                 }
-                else if(Inventory.instance.inventoryContains(2003) && !Inventory.instance.inventoryContains(2007)) {
+                else if (Inventory.instance.inventoryContains(2003) && !Inventory.instance.inventoryContains(2007)) {
                     other.GetComponent<Message>().dialogue.sentences[0] = "열쇠와 화로에 적힌 글을 발견하였다.";
                     other.GetComponent<Message>().dialogue.sentences[1] = "INT_MAX에 없는 숫자는 무엇일까요?";
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
@@ -260,93 +263,127 @@ public class PlayerController : MonoBehaviour {
         }
 
         else if (GameManager.stageLevel == 3 && inputKey == true) {
-
-            if (other.tag == "Bookshelf") {
-                FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
-            }
-
-            else if (other.tag == "Picture") {
+            if (other.tag == "Picture") {
                 canDown = true;
-                FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
-
-            }
-
-
-            else if (other.tag == "Window") {
+                other.GetComponent<AudioSource>().Play();
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
             }
 
-            else if (other.tag == "TV") {
-                FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
-            }
-
-            else if (other.tag == "Piano") {
-                if (PianoTrigger == false) {
-                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
-                    PCTrigger = true;
-                }
-                else if (PianoTrigger == true) {
-                    FindObjectOfType<PortalController>().Teleport(player, other.GetComponent<PortalPosition>());
-                }
-            }
-
-            else if (other.tag == "PC") {
-                if (!electricityOn) {
+            if (headacheTrigger == false) {
+                if (other.tag == "Bookshelf") {
+                    other.GetComponent<AudioSource>().Play();
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
                 }
-                else if (electricityOn) {
-                    if (Inventory.instance.inventoryContains(4003)) {
-                        other.GetComponent<Message>().dialogue.sentences[0] = "컴퓨터가 켜진것 같다....";
-                        other.GetComponent<Message>().dialogue.sentences[1] = "이것저것 찾아보자....";
-                        other.GetComponent<Message>().dialogue.sentences[2] = "왜 이런 사진이...??";
-                        other.GetComponent<Message>().dialogue.sentences[3] = "..............";
-                        other.GetComponent<Message>().dialogue.sentences[4] = "나와 철창에 갖혀있는 사람들이 찍혀있다.....";
-                        other.GetComponent<Message>().dialogue.sentences[5] = "문을 열 수 있는 보안프로그램을 해제하였다...";
+
+                else if (other.tag == "Shelf") { 
+                    other.GetComponent<AudioSource>().Play();
+                    if (!Inventory.instance.inventoryContains(4001))
+                        Inventory.instance.AddItem(4001);
+                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                    headacheTrigger = true;
+                }
+            }
+
+            else if (headacheTrigger == true) {
+
+                if (other.tag == "Window") {
+                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                }
+
+                else if (other.tag == "TV") {
+                    other.GetComponent<AudioSource>().Play();
+                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                }
+
+                else if (other.tag == "Piano") {
+                    if (PianoTrigger == false) {
                         FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
-                        PianoTrigger = true;
+                        PCTrigger = true;
+                    }
+                    else if (PianoTrigger == true) {
+                        other.GetComponent<AudioSource>().Play();
+                        FindObjectOfType<PortalController>().Teleport(player, other.GetComponent<PortalPosition>());
                     }
                 }
-            }
 
-            else if (other.tag == "Clock") {
-                FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
-            }
-            
-            else if(other.tag == "USB_Vase") {
-                if (Inventory.instance.inventoryContains(4013)) {
+                else if (other.tag == "PC") {
+                    if (!electricityOn) {
+                        FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                    }
+                    else if (electricityOn) {
+                        if (Inventory.instance.inventoryContains(4003)) {
+                            other.GetComponent<AudioSource>().Play();
+                            other.GetComponent<Message>().dialogue.sentences[0] = "컴퓨터가 켜진것 같다....";
+                            other.GetComponent<Message>().dialogue.sentences[1] = "이것저것 찾아보자....";
+                            other.GetComponent<Message>().dialogue.sentences[2] = "왜 이런 사진이...??";
+                            other.GetComponent<Message>().dialogue.sentences[3] = "..............";
+                            other.GetComponent<Message>().dialogue.sentences[4] = "나와 철창에 갖혀있는 사람들이 찍혀있다.....";
+                            other.GetComponent<Message>().dialogue.sentences[5] = "문을 열 수 있는 보안프로그램을 해제하였다...";
+                            FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                            PianoTrigger = true;
+                        }
+                    }
+                }
+
+                else if (other.tag == "Clock") {
                     FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
-                    if(!Inventory.instance.inventoryContains(4003))
-                        Inventory.instance.AddItem(4003);
-                    other.GetComponent<SpriteRenderer>().sprite = None;
+                }
+
+                else if (other.tag == "USB_Vase") {
+                    if (Inventory.instance.inventoryContains(4013)) {
+                        other.GetComponent<AudioSource>().Play();
+                        FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                        if (!Inventory.instance.inventoryContains(4003))
+                            Inventory.instance.AddItem(4003);
+                        other.GetComponent<SpriteRenderer>().sprite = None;
+                    }
+                }
+
+                else if (other.tag == "Bookshelf2") {
+                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                    other.GetComponent<AudioSource>().Play();
+
+                    if (!Inventory.instance.inventoryContains(4013))
+                        Inventory.instance.AddItem(4013);
+                }
+
+                else if (other.tag == "Electricity" && PCTrigger == true) {
+                    electricityOn = true;
+                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                }
+
+                else if (other.tag == "Jail") {
+                    other.GetComponent<AudioSource>().Play();
+                    FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                }
+
+                else if (other.tag == "JailDoor") {
+                    other.GetComponent<AudioSource>().Play();
+                    FindObjectOfType<PortalController>().Teleport(player, other.GetComponent<PortalPosition>());
+                    EndTrigger = true;
+                }
+
+                else if (other.tag == "Chain") {
+                    if (EndTrigger == false) {
+                        FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                    }
+                    else if(EndTrigger == true) {
+                        other.GetComponent<AudioSource>().Play();
+                        if (!Inventory.instance.inventoryContains(5007))
+                            Inventory.instance.AddItem(5007);
+                    }
+                }
+
+                else if(other.tag == "GameEnd") {
+                    if (!Inventory.instance.inventoryContains(5007)) {
+                        FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
+                    }
+                    else {
+                        other.GetComponent<AudioSource>().Play();
+                        GameManager.instance.EndGame();
+                    }          
                 }
             }
-
-            else if (other.tag == "Shelf") {
-                if (!Inventory.instance.inventoryContains(4001))
-                    Inventory.instance.AddItem(4001);
-                FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
-            }
-
-            else if (other.tag == "Bookshelf2") {
-                FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
-
-                if (!Inventory.instance.inventoryContains(4013))
-                    Inventory.instance.AddItem(4013);
-            }
-
-            else if (other.tag == "Electricity" && PCTrigger == true) {
-                electricityOn = true;
-                FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
-            }
-
-            else if (other.tag == "Jail") {
-                FindObjectOfType<DialogueTrigger>().TriggerDialogue(other.GetComponent<Message>());
-            }
-
-            else if(other.tag == "JailDoor") {
-                FindObjectOfType<PortalController>().Teleport(player, other.GetComponent<PortalPosition>());
-            }
-
         }
     }
 }
