@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4068619754728213461}
   - component: {fileID: 6925790835404901850}
   - component: {fileID: 696966251711304991}
+  - component: {fileID: 1057265327784471987}
   m_Layer: 0
   m_Name: GameEndDoor
   m_TagString: GameEnd
@@ -67,7 +68,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -752577117
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e332aaa7226f5f14686e85a95c24a963, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -106,3 +107,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.66, y: 0.99}
   m_EdgeRadius: 0
+--- !u!114 &1057265327784471987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7739924715466532126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17e14f66af6b0f4e8218bda7759ed46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "\uD070 \uBB38"
+    sentences:
+    - "\uC774\uACF3\uC774 \uD0C8\uCD9C\uAD6C\uC778\uAC70 \uAC19\uB2E4...."
+    - '..............'
+    - "\uD0A4\uB97C \uCC3E\uC544\uBCF4\uC790"
