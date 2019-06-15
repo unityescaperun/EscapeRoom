@@ -215,6 +215,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5639897808268184236, guid: 1d8389c482eb34f4a93a977950a35f4a,
         type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: PortalDown
+      value: 
+      objectReference: {fileID: 5261665634180943111, guid: 04b364d3e4833ad4ead89a787b73bd60,
+        type: 3}
+    - target: {fileID: 6907307100633831620, guid: c1c1dde809e361c4bb166750be9c8894,
+        type: 3}
+      propertyPath: PortalUp
+      value: 
+      objectReference: {fileID: 3647793962967889078, guid: 786a8709095082347b4693fb0b9d135e,
+        type: 3}
     - target: {fileID: 6907307100633831623, guid: c1c1dde809e361c4bb166750be9c8894,
         type: 3}
       propertyPath: stage1
@@ -1100,12 +1112,12 @@ PrefabInstance:
     - target: {fileID: 9136371334265715947, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -304
+      value: -419.4
       objectReference: {fileID: 0}
     - target: {fileID: 9136371334265715947, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -229
+      value: -228.7
       objectReference: {fileID: 0}
     - target: {fileID: 9136371334265715947, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
         type: 3}
