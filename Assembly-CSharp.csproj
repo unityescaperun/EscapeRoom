@@ -75,6 +75,7 @@
     <Compile Include="Assets\Script\PlayerController.cs" />
     <Compile Include="Assets\Script\PortalController.cs" />
     <Compile Include="Assets\Script\PortalPosition.cs" />
+    <Compile Include="Assets\Script\ReturnMenuButton.cs" />
     <Compile Include="Assets\Script\StartClickButton.cs" />
     <None Include="Assets\Sprites\roguelike-modern-city-pack\Spritesheet\spritesheetInfo.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">

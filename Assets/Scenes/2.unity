@@ -493,6 +493,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -580,6 +581,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11425e4fadb09294db9e39b8fee5a36a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &667184640
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,27 +1418,42 @@ PrefabInstance:
     - target: {fileID: 9136371334265715947, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -446
+      value: -436
       objectReference: {fileID: 0}
     - target: {fileID: 9136371334265715947, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -224
+      value: -249
       objectReference: {fileID: 0}
     - target: {fileID: 9136371334265715947, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 14.875
+      value: 41.649998
       objectReference: {fileID: 0}
     - target: {fileID: 9136371334265715947, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 10.738
+      value: 52.6162
       objectReference: {fileID: 0}
     - target: {fileID: 2686457834347401046, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
         type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454112389295798869, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7904797991519210240, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420033}
+    - target: {fileID: 7904797991519210240, guid: 857e7dfbea04b8647bb923b28d2fbbd5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickExit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 857e7dfbea04b8647bb923b28d2fbbd5, type: 3}
