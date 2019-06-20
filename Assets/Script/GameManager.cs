@@ -7,7 +7,13 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     public MapManager mapScript;
 
-    public static int stageLevel =1;       
+    private FadeManager fadeScript;
+
+    public static int stageLevel = 1;       
+
+    public AudioClip stage1;
+    public AudioClip stage2;
+    public AudioClip stage3;
 
     void Awake() {
         if (instance == null)
@@ -17,24 +23,43 @@ public class GameManager : MonoBehaviour {
 
         DontDestroyOnLoad(gameObject);
         mapScript = GetComponent<MapManager>();
+        fadeScript = FindObjectOfType<FadeManager>();
         InitGame();
+    }
+
+    void Start() {
     }
 
     void InitGame() {
         mapScript.SetupScene();
+        FadeManager.instance.FadeIn();
     }
 
-    public static void EndGame() {
+    public void EndGame() {
         stageLevel++;
         // 마지막 스테이지 설정
-        if (stageLevel == 4) {
+        if (stageLevel == 5) {
             Application.Quit();
         }
-        else
-            SceneManager.LoadScene(stageLevel, LoadSceneMode.Single);
-
+        else {
+            StartCoroutine(FadeOutCoroutine());
+        }      
     }
-    void Update() {
 
+    IEnumerator FadeOutCoroutine() {
+        FadeManager.instance.FadeOut();
+        //FindObjectOfType<GameManager>().GetComponent<AudioSource>().Play();
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(stageLevel, LoadSceneMode.Single);
+        if(stageLevel == 2)
+            FindObjectOfType<GameManager>().GetComponent<AudioSource>().clip = stage2;
+        else if(stageLevel == 3)
+            FindObjectOfType<GameManager>().GetComponent<AudioSource>().clip = stage3;
+        FindObjectOfType<GameManager>().GetComponent<AudioSource>().Play();
+    }
+
+    IEnumerator FadeInCoroutine() {
+        yield return new WaitForSeconds(1f);
+        
     }
 }

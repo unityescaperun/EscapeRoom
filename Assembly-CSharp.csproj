@@ -65,6 +65,7 @@
     <Compile Include="Assets\Script\DialogueManager.cs" />
     <Compile Include="Assets\Script\DialogueTrigger.cs" />
     <Compile Include="Assets\Script\ExitClickButton.cs" />
+    <Compile Include="Assets\Script\FadeManager.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\Inventory.cs" />
     <Compile Include="Assets\Script\Item.cs" />
@@ -74,8 +75,9 @@
     <Compile Include="Assets\Script\PlayerController.cs" />
     <Compile Include="Assets\Script\PortalController.cs" />
     <Compile Include="Assets\Script\PortalPosition.cs" />
-    <Compile Include="Assets\Script\SpriteController.cs" />
+    <Compile Include="Assets\Script\ReturnMenuButton.cs" />
     <Compile Include="Assets\Script\StartClickButton.cs" />
+    <None Include="Assets\Sprites\roguelike-modern-city-pack\Spritesheet\spritesheetInfo.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Yun/Documents/EscapeRoom/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

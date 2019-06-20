@@ -21,6 +21,26 @@ TagManager:
   - FirePlace
   - Window_2
   - NPC
+  - Food
+  - Food1
+  - Cook
+  - Material
+  - ShelfPoison
+  - GameEnd
+  - Chain
+  - TV
+  - Bookshelf
+  - Clock
+  - Window
+  - PC
+  - Jail
+  - Shelf
+  - Bookshelf2
+  - Piano
+  - Electricity
+  - Picture
+  - USB_Vase
+  - JailDoor
   layers:
   - Default
   - TransparentFX
@@ -61,6 +81,9 @@ TagManager:
   - name: Background
     uniqueID: 1973800001
     locked: 0
+  - name: Furniture
+    uniqueID: 1712440821
+    locked: 0
   - name: Item
     uniqueID: 3542390179
     locked: 0
@@ -69,4 +92,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2819049019
+    locked: 0
+  - name: UI
+    uniqueID: 3946740911
     locked: 0
