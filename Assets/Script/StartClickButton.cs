@@ -13,6 +13,7 @@ public class StartClickButton : MonoBehaviour {
     }
 
     public void OnClickExit() {
+        GameManager.stageLevel = 1;
         SceneManager.LoadScene("1");
     }
 }

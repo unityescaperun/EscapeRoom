@@ -51,10 +51,14 @@ public class GameManager : MonoBehaviour {
         //FindObjectOfType<GameManager>().GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(stageLevel, LoadSceneMode.Single);
-        if(stageLevel == 2)
+        if(stageLevel == 1)
+            FindObjectOfType<GameManager>().GetComponent<AudioSource>().Stop();
+        else if (stageLevel == 2)
             FindObjectOfType<GameManager>().GetComponent<AudioSource>().clip = stage2;
-        else if(stageLevel == 3)
+        else if (stageLevel == 3)
             FindObjectOfType<GameManager>().GetComponent<AudioSource>().clip = stage3;
+        else if (stageLevel == 4)
+            FindObjectOfType<GameManager>().GetComponent<AudioSource>().Stop();
         FindObjectOfType<GameManager>().GetComponent<AudioSource>().Play();
     }
 
